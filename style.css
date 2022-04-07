@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.page-wrapper {
+  position:relative;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: #FFF;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 40px;
+  z-index: 999;
+}
+
+#header img {
+	width: 250px;
+}
+
+#nav-bar ul {
+  display: flex;
+}
+
+#nav-bar li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: #222; 
+}
+
+#nav-bar a:hover{
+  color: #ff5a26;
+  cursor: pointer;
+}
+
+#nav-bar ion-icon {
+    color: #32502E;
+    font-size: 24px;
+}
+
+.banner {
+  position:relative;
+  width:100%;
+  margin-top: 60px;
+}
+
+.banner .bg {
+  display:flex;
+  position: relative;
+  background:#222;
+  width: 100%;
+  height:75vh;
+  
+  align-items:center;
+  justify-content:left;
+}
+
+.cover {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.form {
+  width: 700px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items: left;
+  justify-content: center;
+  margin: 10px 20px;
+}
+
+.form h1 {
+  margin: 0px 20px;
+  color: #32502E;
+  font-size:2.5em;
+  text-align: left;
+}
+
+.form p {
+  margin: 0px 20px;
+  color: #32502E;
+  text-align: left;
+}
+
+.form .email, .btn{
+  width: 50%;
+  border: none;
+  padding: 5px 15px;
+  margin: 5px 20px; 
+  letter-spacing:1px;
+  border-radius: 5px;
+}
+
+.form .btn {
+  width: 20%;
+  background-color: #32502E;
+  color: #FFF;
+  min-width: 150px;
+}
+
+.form .btn:hover {
+  background-color:#ffc800;
+}
+
+/* Explore */
+.explore {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+  height: 375px;
+  background-color: #555;
+  margin: 20px;
+  justify-content: flex-end;
+  border-radius: 1em;
+}
+
+.card-cover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+.destination {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 15px;
+  
+  align-items: center;
+}
+
+.destination p, ion-icon {
+  color: #fff;
+}
+
+.location {
+  display: flex;
+  margin-top: 5px;
+}
+.location p{
+  font-size: 0.75em;
+  margin-left: 10px;
+}
+
+#video {
+  border-radius: 1em;
+  margin: 20px 0px;
+}
+
+/* about */
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  padding: 20px 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.my-photo {
+  	width: 30%;
+}
+
+.person-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.my-desc {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.my-desc p, .my-desc li {
+  font-size: 1em;
+}
+
+.greetings {
+    margin: 20px 0px;
+}
+
+.my-data li {
+  list-style: none;
+}
+
+@media (max-width: 800px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .my-desc {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .greetings {
+    width: 50%;
+    padding: 0px 20px;
+  }
+  .my-data {
+    padding: 0px 20px;
+  }
+  .my-data li {
+    margin: 10px 0px;
+  }
+  .my-desc p, .my-desc li {
+    font-size: 0.75em;
+  }
+	.contact {
+		flex-direction: column;
+	}
+	
+}
+
+/* contact */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#32502E;
+  padding: 10px 40px;
+  
+}
+
+.contact .contact-logo {
+  display:flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.contact .contact-logo p {
+  color: #fff;
+}
+
+.contact ion-icon {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 5px 10px;
+}
+
