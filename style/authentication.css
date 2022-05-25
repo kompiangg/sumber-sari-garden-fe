@@ -72,7 +72,7 @@ button.ghost {
 }
 
 .brand-logo {
-	padding: 1rem;
+	padding: 1.5rem;
 }
 
 form {
@@ -89,6 +89,7 @@ form {
 input {
 	background-color: #eee;
 	border: none;
+	border-radius: 3px;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
@@ -97,13 +98,13 @@ input {
 .container {
 	background-color: #fff;
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 550px;
 }
 
 .form-container {
@@ -165,9 +166,11 @@ input {
 }
 
 .overlay {
-	background: #33793C;
-	background: -webkit-linear-gradient(to right, #32502E, #33793C);
-	background: linear-gradient(to right, #32502E, #33793C);
+	background: rgb(51,121,60);
+	background: -moz-radial-gradient(circle, rgba(51,121,60,1) 15%, rgba(50,80,46,1) 100%);
+	background: -webkit-radial-gradient(circle, rgba(51,121,60,1) 15%, rgba(50,80,46,1) 100%);
+	background: radial-gradient(circle, rgba(51,121,60,1) 15%, rgba(50,80,46,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#33793c",endColorstr="#32502e",GradientType=1);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -229,4 +232,12 @@ input {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
+}
+
+.addition-text {
+	margin-bottom: 22px;
+}
+
+.action-button {
+	margin-top: 17px;
 }

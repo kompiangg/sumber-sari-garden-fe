@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account or Login</title>
-    <link rel="stylesheet" href="/style/authentication.css">
-</head>
-<body>
-<img src="/assets/img/shop_logo.png" alt="" class="brand-logo">
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#"> 
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social"><ion-icon name="logo-facebook"></ion-icon></a>
-				<a href="#" class="social"><ion-icon name="logo-google"></ion-icon></a>
-				<a href="#" class="social"><ion-icon name="logo-linkedin"></ion-icon></a>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Create Account or Login</title>
+		<link rel="stylesheet" href="./style/authentication.css">
+	</head>
+	<body>
+		<img src="/assets/img/shop_logo.png" alt="brand logo" class="brand-logo">
+		<div class="container" id="container">
+			<div class="form-container sign-up-container">
+				<form action="#"> 
+					<div class="addition-text">
+						<h1>Create Account</h1>
+						<span>join to our family aw</span>
+					</div>
+					<div class="input">
+						<input required type="text" id="register__first-name" placeholder="First Name*" />
+						<small></small>
+						<input required type="text" id="register__last-name" placeholder="Last Name*" />
+						<small></small>
+						<input required type="tel" id="register__phone" placeholder="Phone*">
+						<small></small>
+						<input required type="text" id="register__address" placeholder="Address*">
+						<small></small>
+						<input required type="email" id="register__email" placeholder="Email*" />
+						<small></small>
+						<input required type="password" id="register__password" placeholder="Password*" />
+						<small></small>
+					</div>
+					<button type="submit" class="action-button">Register</button>
+				</form>
 			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Sign in</h1>
-			<div class="social-container">
-				<a href="#" class="social"><ion-icon name="logo-facebook"></ion-icon></a>
-				<a href="#" class="social"><ion-icon name="logo-google"></ion-icon></a>
-				<a href="#" class="social"><ion-icon name="logo-linkedin"></ion-icon></a>
+			<div class="form-container sign-in-container">
+				<form action="#">
+					<div class="addition-text">
+						<h1>Login</h1>
+						<span>use your existed account</span>
+					</div>
+					<div class="input">
+						<input required type="email" placeholder="Email" />
+						<small></small>
+						<input required type="password" placeholder="Password" />
+						<small></small>
+					</div>
+					<button type="submit" class="action-button">Login</button>
+				</form>
 			</div>
-			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
-				<button class="ghost" id="signIn">Login</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Register</button>
+			<div class="overlay-container">
+				<div class="overlay">
+					<div class="overlay-panel overlay-left">
+						<h1 class="addition-text">Already have an account?</h1>
+						<button class="ghost" id="signIn">Login</button>
+					</div>
+					<div class="overlay-panel overlay-right">
+						<h1 class="addition-text">Don't have an account?</h1>
+						<button class="ghost" id="signUp">Register</button>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
 
-<script src="./script/authentication.js"></script>
-</body>
+		<script src="./script/authentication.js"></script>
+	</body>
 </html>
