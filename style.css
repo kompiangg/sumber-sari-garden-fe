@@ -10,6 +10,23 @@
   position:relative;
 }
 
+a, a:hover, a:focus, a:active {
+  text-decoration: none!important;
+  color: inherit!important;
+}
+
+.navbar {
+  padding: 0.75em 0;
+}
+
+.navbar img {
+  width: 250px;
+}
+
+.navbar .profile button {
+  font-size: small;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -227,6 +244,11 @@
 
 .my-data li {
   list-style: none;
+}
+
+.profile .hyperlink {
+  display: none;
+  align-items: center;
 }
 
 @media (max-width: 800px) {
