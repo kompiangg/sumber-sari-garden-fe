@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumber Sari Garden</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="page-wrapper">
-    <!--   logo + nav-bar -->
-        <div class="header" id="header">
-            <div>
-            <img src="https://i.postimg.cc/wvKbSZHv/Shop-Logo.png" alt="shop logo" class="header-img" id="header-img">
-            </div>
-            
-            <nav class="nav-bar" id="nav-bar">
-            <ul>
-                <li><a class="nav-link" href="#home">Home</a></li>
-                <li><a class="nav-link" href="#explore">Explore</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#"><ion-icon name="person-outline"></ion-icon></a></li>
-            </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sumber Sari Garden</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body class="page-wrapper">
+        <!--   logo + nav-bar -->
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top bg-light">
+                <div class="container">
+                    <a href="#" class="navbar-brand">
+                        <img src="https://i.postimg.cc/wvKbSZHv/Shop-Logo.png" alt="shop logo" class="header-img" id="header-img">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#explore">Explore</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                        </ul>
+                        <div class="profile d-flex">
+                                <button class="btn btn-outline-success">
+                                    <a href="authentication.html?login=1"><strong>Login</strong></a>
+                                </button>
+                                <button class="btn btn-success">
+                                    <a href="authentication.html?register=1"><strong>Register</strong></a>
+                                </button>
+                        </div>
+                    </div>
+                </div>
             </nav>
-        </div>
-        
-        <!--   body -->
+        </header>
+
+        <!-- Hero Section -->
         <section class="banner" id="home">
             <div class="bg">
-            
-            <img src="https://i.postimg.cc/WbMbhwkC/hero.jpg" alt="Bali-Island" id="cover" class="cover">
-            
-            <form action="https://www.freecodecamp.com/email-submit" id="form" class="form">
-                <h1>Welcome!</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi iaculis neque molestie congue egestas faucibus arcu enim. Mi in massa suspendisse vitae felis, magna ultricies urna dolor. Maecenas quis imperdiet quam enim urna. 
-                </p>
-                <input 
-                    type="email" 
-                    id="email" 
-                    class="email"
-                    name="email"
-                    placeholder="Search..."
-                    required>
-                <input id="submit" type="submit" value="Get Started" class="btn" />
-            </form>
-            
+                <div class="container">
+                    <img src="https://i.postimg.cc/WbMbhwkC/hero.jpg" alt="Bali-Island" id="cover" class="cover">
+                    <form action="https://www.freecodecamp.com/email-submit" id="form" class="form">
+                        <h1>Welcome!</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi iaculis neque molestie congue egestas faucibus arcu enim. Mi in massa suspendisse vitae felis, magna ultricies urna dolor. Maecenas quis imperdiet quam enim urna. 
+                        </p>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="email"
+                            name="email"
+                            placeholder="Search...">
+                        <input id="submit" type="submit" value="Get Started" class="btn" />
+                    </form>
+                </div>
             </div>
         </section>
         
@@ -53,73 +71,45 @@
             
             <h2>Top Sales</h2>
             
-            <div class="cards">
-            <div class="card">
-                <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" alt="succulent" class="card-cover">         
-                <div class="destination">
-                <p>Cute Cactus</p>
-                <div class="location">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p>North Denpasar, Bali</p>
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" alt="succulent" class="card-cover">         
-                <div class="destination">
-                <p>Cute Cactus</p>
-                <div class="location">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p>North Denpasar, Bali</p>
-                </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" alt="succulent" class="card-cover">         
-                <div class="destination">
-                <p>Cute Cactus</p>
-                <div class="location">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <p>North Denpasar, Bali</p>
-                </div>
+            <div class="cards container">
+                <div class="row">
+                    <div class="card col-md">
+                        <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" alt="succulent" class="card-cover">         
+                        <div class="destination">
+                        <p>Cute Cactus</p>
+                        <div class="location">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>North Denpasar, Bali</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card col-md">
+                        <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" alt="succulent" class="card-cover">         
+                        <div class="destination">
+                        <p>Cute Cactus</p>
+                        <div class="location">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>North Denpasar, Bali</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card col-md">
+                        <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" alt="succulent" class="card-cover">         
+                        <div class="destination">
+                        <p>Cute Cactus</p>
+                        <div class="location">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>North Denpasar, Bali</p>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            </div>
-            
-            <!--   video -->
             <h2>Play Me!</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/5mWH5ajGJF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5mWH5ajGJF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
             
         </section>
-        
-        <!--   about -->
-        <section class="about" id="about">
-            <div class="about-title">
-            <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-            <div class="my-photo">
-                <img src="https://images.unsplash.com/photo-1640006684901-4e8367a7a9dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" alt="person" class="person-img">
-            </div>
-            <div class="my-desc">
-                <div class="greetings">
-                <p><strong>I'm just a nice inocent guys :D </strong></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium earum, enim explicabo aperiam impedit id porro, vel accusamus at ea voluptate labore consequatur sit voluptatibus atque reprehenderit adipisci eligendi! Blanditiis?</p>
-                </div>
-                <div class="my-data">
-                <ul>
-                    <li><strong>Name :</strong>  Owner's name</li>
-                    <li><strong>Age :</strong> 35 y.o. </li>
-                    <li><strong>Email :</strong> sumbersarigarden@gmail.com</li>
-                    <li><strong>From :</strong> Denpasar Regency, Bali</li>
-                </ul>
-                </div>
-        
-            </div>
-            </div>
-        </section>
-        
         
         <!-- Contact -->
         <section class="contact" id="contact">
@@ -139,7 +129,8 @@
             </div>
             
         </section>
-      
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
