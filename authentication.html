@@ -11,41 +11,41 @@
 		<img src="/assets/img/shop_logo.png" alt="brand logo" class="brand-logo">
 		<div class="container" id="container">
 			<div class="form-container sign-up-container">
-				<form action="#"> 
+				<form action="#" id="register-form"> 
 					<div class="addition-text">
 						<h1>Create Account</h1>
 						<span>join to our family aw</span>
 					</div>
 					<div class="input">
-						<input required type="text" id="register__first-name" placeholder="First Name*" />
-						<small></small>
-						<input required type="text" id="register__last-name" placeholder="Last Name*" />
-						<small></small>
-						<input required type="tel" id="register__phone" placeholder="Phone*">
-						<small></small>
-						<input required type="text" id="register__address" placeholder="Address*">
-						<small></small>
-						<input required type="email" id="register__email" placeholder="Email*" />
-						<small></small>
-						<input required type="password" id="register__password" placeholder="Password*" />
-						<small></small>
+						<input required type="text" name="register__first-name" id="register__first-name" placeholder="First Name*" />
+						<small class="register__first-name"></small>
+						<input required type="text" name="register__last-name" id="register__last-name" placeholder="Last Name*" />
+						<small class="register__last-name"></small>
+						<input required type="tel" name="register__phone" id="register__phone" placeholder="Phone*">
+						<small class="register__phone"></small>
+						<input required type="text" name="register__address" id="register__address" placeholder="Address*">
+						<small class="register__address"></small>
+						<input required type="email" name="register__email" id="register__email" placeholder="Email*" />
+						<small class="register__email"></small>
+						<input required type="password" name="register__password" id="register__password" placeholder="Password*" />
+						<small class="register__password"></small>
 					</div>
-					<button type="submit" class="action-button">Register</button>
+					<button type="submit" class="action-button" id="action-register">Register</button>
 				</form>
 			</div>
 			<div class="form-container sign-in-container">
-				<form action="#">
+				<form action="#" id="login-form">
 					<div class="addition-text">
 						<h1>Login</h1>
 						<span>use your existed account</span>
 					</div>
 					<div class="input">
-						<input required type="email" placeholder="Email" />
-						<small></small>
-						<input required type="password" placeholder="Password" />
-						<small></small>
+						<input required id="login__email" name="login__email" type="email" placeholder="Email" />
+						<small class="login__email"></small>
+						<input required id="login__password" name="login__password" type="password" placeholder="Password" />
+						<small class="login__password"></small>
 					</div>
-					<button type="submit" class="action-button">Login</button>
+					<button type="submit" class="action-button" id="action-login">Login</button>
 				</form>
 			</div>
 			<div class="overlay-container">
@@ -62,6 +62,6 @@
 			</div>
 		</div>
 
-		<script src="./script/authentication.js"></script>
+		<script type="module" src="./script/authentication.js"></script>
 	</body>
 </html>
