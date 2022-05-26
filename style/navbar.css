@@ -1,0 +1,19 @@
+.logout-button,
+.login-button {
+  color:#32502E!important;
+  font-weight: 600!important;
+}
+
+.logout-button:hover,
+.login-button:hover {
+  color:white!important;
+  font-weight: 600!important;
+}
+
+.profile-button,
+.register-button,
+.profile-button:hover,
+.register-button:hover{
+  color: white!important;
+  font-weight: 600!important;
+}
