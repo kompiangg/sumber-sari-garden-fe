@@ -1,5 +1,14 @@
-const navbar = document.querySelector('nav')
+const headerNav = document.querySelector('header')
 
+const link = document.createElement('link')
+link.href = "/style/navbar.css"
+link.type = "text/css"
+link.rel = "stylesheet"
+link.media = "screen,print"
+headerNav.appendChild(link)
+
+const navbar = document.createElement('nav')
+navbar.className = "navbar navbar-expand-lg fixed-top bg-light"
 navbar.innerHTML = `
 <div class="container">
     <a href="#" class="navbar-brand">
@@ -25,10 +34,10 @@ navbar.innerHTML = `
     </div>
 </div>
 `
+headerNav.appendChild(navbar)
 
 const profile = document.querySelector('.profile')
 const isLogin = localStorage.getItem('auth.access_token')
-
 profile.innerHTML = isLogin ? 
   `
   <a class="btn btn-outline-success logout-button" href="index.html">
@@ -51,3 +60,4 @@ document.addEventListener('click', element => {
     localStorage.clear()
   }
 })
+
