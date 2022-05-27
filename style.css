@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,500,700&display=swap');
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -227,4 +227,33 @@ a, a:hover, a:focus, a:active {
 		flex-direction: column;
 	}
 	
+}
+
+.discount {
+  background: url(./assets/img/discount_section.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 154px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.discount p {
+  color: white;
+  font-weight: medium;
+  font-size: 48px;
+  margin-bottom: 0px;
+}
+
+.discount p.discount-wrapper {
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 28px;
+  padding: 4px 60px;
+  cursor: pointer;
 }

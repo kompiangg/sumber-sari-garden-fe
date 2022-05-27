@@ -46,11 +46,15 @@
 }
 
 nav .btn {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 nav a {
   color: #32502E;
+}
+
+.nav-link {
+  font-size: 18px;
 }
 
 nav a:hover {

@@ -8,24 +8,26 @@
 }
 
 footer {
+  margin-top: 50px;
   min-height: 150px;
   background-color: #232323;
   padding-top: 35px;
 }
 
 footer h4 {
+  letter-spacing: 1px;
   color: white;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 18px;
 }
 
 footer p, footer a{
-  font-size: 13px;
+  font-size: 14px;
 }
 
 footer h5 {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   margin-bottom: 0px!important;
 }
