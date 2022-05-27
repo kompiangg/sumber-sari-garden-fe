@@ -6,66 +6,14 @@
   margin:0;
   box-sizing: border-box;
 }
-.page-wrapper {
-  position:relative;
-}
 
 a, a:hover, a:focus, a:active {
   text-decoration: none!important;
   color: inherit!important;
 }
 
-.navbar {
-  padding: 0.75em 0;
-}
-
-.navbar img {
-  width: 250px;
-}
-
-.navbar .profile button {
-  font-size: small;
-}
-
-#header {
-  position: fixed;
-  top: 0;
-  display: flex;
-  background-color: #FFF;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 50px;
-  padding: 10px 40px;
-  z-index: 999;
-}
-
-#header img {
-	width: 250px;
-}
-
-#nav-bar ul {
-  display: flex;
-}
-
-#nav-bar li {
-  list-style: none;
-  margin-left: 20px;
-}
-
-#nav-bar a {
-  text-decoration: none;
-  color: #222; 
-}
-
-#nav-bar a:hover{
-  color: #ff5a26;
-  cursor: pointer;
-}
-
-#nav-bar ion-icon {
-    color: #32502E;
-    font-size: 24px;
+.page-wrapper {
+  position:relative;
 }
 
 .banner {
@@ -117,7 +65,7 @@ a, a:hover, a:focus, a:active {
   text-align: left;
 }
 
-.form .email, .btn{
+.form .email{
   width: 50%;
   border: none;
   padding: 5px 15px;
@@ -220,7 +168,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .my-photo {
-  	width: 30%;
+  width: 30%;
 }
 
 .person-img {
@@ -244,11 +192,6 @@ a, a:hover, a:focus, a:active {
 
 .my-data li {
   list-style: none;
-}
-
-.profile .hyperlink {
-  display: none;
-  align-items: center;
 }
 
 @media (max-width: 800px) {
@@ -285,29 +228,3 @@ a, a:hover, a:focus, a:active {
 	}
 	
 }
-
-/* contact */
-/* .contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color:#32502E;
-  padding: 10px 40px;
-  
-}
-
-.contact .contact-logo {
-  display:flex;
-  align-items: center;
-  margin: 0px 10px;
-}
-
-.contact .contact-logo p {
-  color: #fff;
-}
-
-.contact ion-icon {
-  color: #fff;
-  font-size: 1.5em;
-  margin: 5px 10px;
-} */
