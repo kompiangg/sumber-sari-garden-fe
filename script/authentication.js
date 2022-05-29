@@ -27,13 +27,13 @@ loginButton.addEventListener('click', async (event) => {
 	event.preventDefault()
 
 	const form = document.getElementById('login-form')
-	
+
 	let valid = formValidation("login", form)
 
 	if (valid != true) {
 		return
 	}
-	
+
 	const data_profile = {
 		"email": form.elements['login__email'].value.trim(),
 		"password": form.elements['login__password'].value.trim(),
@@ -44,10 +44,10 @@ loginButton.addEventListener('click', async (event) => {
 	const sendLogin = await util.FetchAuth('/auth/login', payload)
 
 	if (sendLogin.error != null) {
-		errorHandling.PrintError(sendLogin.error.message)
+		errorHandling.PrintError(sendLogin.error)
 		return
 	}
-	
+
 	util.SetLocalStorageLogin(sendLogin.data)
 
 	window.location.href = "index.html"
@@ -132,7 +132,7 @@ function formValidation(sectionValidation, form) {
 		let phoneValid = hasValue(form['register__phone'], "*Please enter your phone number")
 		let addressValid = hasValue(form['register__address'], "*Please enter your address")
 		let emailValid = hasValue(form['register__email'], "*Please enter your email")
-		let passwordValid = hasValue(form['register__password'], "*Please enter your password") 
+		let passwordValid = hasValue(form['register__password'], "*Please enter your password")
 
 		if (firstNameValid &&
 			lastNameValid &&
@@ -140,8 +140,8 @@ function formValidation(sectionValidation, form) {
 			addressValid &&
 			emailValid &&
 			passwordValid) {
-				return true
-			}
+			return true
+		}
 		return false
 	}
 }

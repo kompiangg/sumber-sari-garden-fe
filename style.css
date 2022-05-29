@@ -12,6 +12,17 @@ a, a:hover, a:focus, a:active {
   color: inherit!important;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
 .page-wrapper {
   position:relative;
 }

@@ -1,3 +1,5 @@
+import validateAdmin from "./util/dashboardAuth.js"
+
 const headerNav = document.querySelector('header')
 
 const link = document.createElement('link')
@@ -38,13 +40,14 @@ headerNav.appendChild(navbar)
 
 const profile = document.querySelector('.profile')
 const isLogin = localStorage.getItem('auth.access_token')
-profile.innerHTML = isLogin ? 
+const isAdmin = localStorage.getItem('profile.role_id')
+profile.innerHTML = isLogin ?
   `
   <a class="btn btn-outline-success logout-button" href="index.html">
-    Logout
+  Logout
   </a>
-  <a class="btn btn-success profile-button" href="profile.html">
-    Profile
+  <a class="btn btn-success profile-button">
+    ${isAdmin == 1 ? "Dashboard" : "Profile"}
   </a>
   ` : `
   <a class="btn btn-outline-success login-button" href="authentication.html" >
@@ -58,6 +61,23 @@ profile.innerHTML = isLogin ?
 document.addEventListener('click', element => {
   if (element.target.classList.contains('logout-button')) {
     localStorage.clear()
+  }
+})
+
+document.addEventListener('click', async element => {
+  if (element.target.classList.contains('profile-button')) {
+    element.preventDefault()
+
+    const isAdmin = localStorage.getItem('profile.role_id')
+    if (isAdmin == 2) {
+      window.location.href = "profile.html"
+    } else if (isAdmin == 1) {
+      let valid = await validateAdmin()
+      if (valid == 0) {
+        return
+      }
+      window.location.href = "dashboard.html"
+    }
   }
 })
 
