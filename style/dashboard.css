@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,300,400,500,700&display=swap');
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -7,9 +7,14 @@
   box-sizing: border-box;
 }
 
-a, a:hover, a:focus, a:active {
+a, a:hover, a:focus, a:active, main li {
   text-decoration: none!important;
+  list-style: none;
   color: inherit!important;
+}
+
+a {
+  cursor: pointer;
 }
 
 body {
@@ -22,7 +27,49 @@ main {
   margin-top: 70px;
 }
 
-h1 {
-  color: rebeccapurple;
-  font-size: 200px;
+.dashboard h1 {
+  margin-top: 40px!important;
+}
+
+.spa-dashboard {
+  margin-top: 25px!important;
+}
+
+.sidebar {
+  background-color: #32502E;
+  color: white;
+  height: fit-content;
+}
+
+.nav-item {
+  font-weight: 300;
+}
+
+.nav-item-active {
+  font-weight: 700;
+}
+
+table, th, td {
+  border: 1px solid black!important;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: #edf5ec;
+}
+
+th, td {
+  padding: 9px 15px;
+  word-wrap: break-word!important;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+table a {
+  text-decoration: underline!important;
+  color: blue!important;
 }

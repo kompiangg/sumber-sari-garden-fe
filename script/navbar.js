@@ -1,4 +1,4 @@
-import validateAdmin from "./util/dashboardAuth.js"
+import ValidateAdmin from "./util/dashboardAuth.js"
 
 const headerNav = document.querySelector('header')
 
@@ -13,7 +13,7 @@ const navbar = document.createElement('nav')
 navbar.className = "navbar navbar-expand-lg fixed-top bg-light"
 navbar.innerHTML = `
 <div class="container">
-    <a href="#" class="navbar-brand">
+    <a href="./index.html" class="navbar-brand">
         <img src="https://i.postimg.cc/wvKbSZHv/Shop-Logo.png" alt="shop logo" class="header-img" id="header-img">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@ document.addEventListener('click', async element => {
     if (isAdmin == 2) {
       window.location.href = "profile.html"
     } else if (isAdmin == 1) {
-      let valid = await validateAdmin()
+      let valid = await ValidateAdmin()
       if (valid == 0) {
         return
       }

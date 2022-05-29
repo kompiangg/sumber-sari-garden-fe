@@ -37,6 +37,11 @@ const util = {
     localStorage.setItem("auth.access_token", sendLogin.access_token)
     let JWTPayload = this.DecodeJWT(sendLogin.access_token)
     localStorage.setItem("profile.id", JWTPayload.data.id)
-  }
+  },
+  ToggleSidebarItem: function (element) {
+    const activated = document.querySelector('.nav-item-active')
+    activated.classList.remove('nav-item-active')
+    element.target.parentElement.classList.add('nav-item-active')
+  },
 }
 export default util

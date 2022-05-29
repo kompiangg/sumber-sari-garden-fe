@@ -1,9 +1,9 @@
 import config from "./config.js";
 import errorHandling from "./errorHandling.js";
 
-async function validateAdmin() {
+async function ValidateAdmin() {
   const isAdmin = localStorage.getItem('profile.role_id')
-  if (isAdmin != 1) {
+  if (isAdmin == null || isAdmin != 1) { // Uncomment when deploy
     window.location.href = "index.html"
     return 0
   }
@@ -28,4 +28,4 @@ async function validateAdmin() {
   }
 }
 
-export default validateAdmin
+export default ValidateAdmin
