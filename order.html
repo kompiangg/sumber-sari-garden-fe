@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sumber Sari Garden</title>
+        <link rel="stylesheet" href="style\order.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body class="page-wrapper">
+        
+        <!-- <header> header here </header> -->
+
+        <!-- Order Body -->
+        <section class="container order-container">
+            <!-- order details for unit ordered, quantity, unit_price and subtotal -->
+            <div class="order-details">
+                <!-- header shopping cart -->
+                <div class="order-logo">
+                    <img src="/assets/img/leaf_icon.png" alt="leaf_icon">
+                    <h2 class="mb-0">Shopping Cart</h2>
+                </div>
+
+                <!-- cards -->
+                <div class="order-cards">
+                    <div class="order-card d-flex">
+                        <img src="/assets/img/cute_cactus.jpg" alt="order_cactus" class="product-img">
+                        
+                        <div class="order-name">
+                            <h5>Product Name Here</h5>
+                            <p>Order ID : xxxxxxxx</p>
+                        </div>
+                        
+                        <order-qty>
+                            <div class="counter">
+                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                <input type="text" value="1">
+                                <span class="up"  onClick='increaseCount(event, this)'>+</span>
+                            </div>
+
+                            <!-- <div class="counter">
+                                <button class="down">-</button>
+                                <div class="quantity-Text">1</div>
+                                <button class="up">+</button>
+                            </div> -->
+                        </order-qty>
+
+                        <div class="total-Text"></div>
+
+                    </div>
+                    
+
+            </div>
+
+
+        </section>
+
+        <footer> <!-- Footer --> </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script type="module" src="./script/footer.js"></script>
+        <script  src="./script/order.js"></script>
+    </body>
 </html>

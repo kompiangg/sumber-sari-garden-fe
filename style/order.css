@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,500,700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+
+}
+
+:root {
+    --main_green: #32502E;
+    --second_green: #406343;
+    --main_yellow: #ECE7B4;
+    --light_yellow: #F3EFCC;
+    --highlight_yellow: #FFCE45;
+    --white: #FFFFFF;
+}
+
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none!important;
+  color: inherit!important;
+}
+
+/* order styles */
+.order-logo {
+    display: flex;
+    flex-direction: row;
+    
+    height: 5em;
+    padding: 1em;
+
+    align-items: center;
+    color: var(--main_green);
+}
+
+.order-logo img {
+    margin-right: 1em;
+}
+
+.order-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.order-card {
+    background-color: var(--main_yellow);
+    padding: 1em;
+    margin-bottom: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.order-card img {
+    width: 100px;
+}
+
+/* order counter */
+.counter {
+    width: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter input {
+    width: 50px;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: var(--main_green);
+    color: #fff;
+    appearance: none;
+    outline: 0;
+}
+
+.counter span {
+    display: block;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: var(--main_green);
+    user-select: none;
+}
+
+.subtotal input {
+    display: block;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: var(--main_green);
+    user-select: none;
+}
+/* order counter */
+
+
+
+
