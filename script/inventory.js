@@ -10,7 +10,7 @@ document.addEventListener('click', async (element) => {
   util.ToggleSidebarItem(element)
 })
 
-export default async function InventoryTable() {
+export async function InventoryTable() {
   const allProducts = await fetch(config.baseURL + '/inventory/products')
     .then(response => errorHandling.HandlingFetchError(response))
     .then(response => response.json())
@@ -44,4 +44,28 @@ export default async function InventoryTable() {
       inventoryTable.appendChild(node)
     })
   }
+}
+
+export function CreateDeleteEventListener() {
+  const allDeleteInventory = document.querySelectorAll('.delete-inventory-item')
+  allDeleteInventory.forEach(element => {
+    element.addEventListener('click', event => {
+      event.preventDefault()
+      const productId = event.target.parentNode.parentNode.dataset.productId
+
+      const deleteItem = fetch(config.baseURL + '/inventory/products/' + productId, {
+        method: 'DELETE',
+        credentials: 'include',
+      }).then(response => errorHandling.HandlingFetchError(response))
+        .then(response => response.json())
+        .catch(error => errorHandling.PrintError(error))
+
+      if (deleteItem.error != null) {
+        errorHandling.PrintError(deleteItem.error.message)
+        return
+      }
+
+      event.target.parentNode.parentNode.remove()
+    })
+  })
 }

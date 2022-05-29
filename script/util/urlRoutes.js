@@ -1,4 +1,5 @@
-import InventoryTable from "../inventory.js"
+// import InventoryTable from "../inventory.js"
+import * as inventory from '../inventory.js'
 
 const urlRoutes = {
   404: {
@@ -10,16 +11,18 @@ const urlRoutes = {
     template: '/dashboard/inventory.html',
     title: '',
     description: '',
-    initFunc: function () {
-      InventoryTable()
+    initFunc: async function () {
+      await inventory.InventoryTable()
+      inventory.CreateDeleteEventListener()
     }
   },
   '/dashboard.html#inventory': {
     template: '/dashboard/inventory.html',
     title: '',
     description: '',
-    initFunc: function () {
-      InventoryTable()
+    initFunc: async function () {
+      await inventory.InventoryTable()
+      inventory.CreateDeleteEventListener()
     }
   },
   '/dashboard.html#verification': {
