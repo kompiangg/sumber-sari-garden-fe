@@ -73,3 +73,53 @@ table a {
   text-decoration: underline!important;
   color: blue!important;
 }
+
+.inventory-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inventory-wrapper button {
+  margin-right: 0px;
+  padding: auto;
+  width: auto;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -1px;
+  background-color: #32502E;
+}
+
+.inventory-wrapper .btn-add:hover, .inventory-wrapper .btn-add:active {
+  background-color: #21301f;
+}
+
+.inventory-wrapper button i {
+  margin-right: 3px;
+}
+
+.inventory-wrapper .btn-modal-close,
+.inventory-wrapper .btn-modal-edit-close{
+  background-color: white;
+  color: #32502E!important;
+  font-weight: 600!important;
+  border-color: #32502E!important;
+}
+
+.inventory-wrapper .btn-modal-close:hover,
+.inventory-wrapper .btn-modal-edit-close:hover{
+  color:white!important;
+  font-weight: 600!important;
+  background-color: #32502E;
+}
+
+form#dashboard-form,
+form#dashboard-edit-form {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+main {
+  margin-bottom: 3rem;
+}

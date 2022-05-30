@@ -43,5 +43,8 @@ const util = {
     activated.classList.remove('nav-item-active')
     element.target.parentElement.classList.add('nav-item-active')
   },
+  GetUserJWTToken: function () {
+    return localStorage.getItem('auth.access_token')
+  }
 }
 export default util

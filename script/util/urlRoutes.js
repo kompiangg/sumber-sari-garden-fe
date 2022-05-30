@@ -13,7 +13,8 @@ const urlRoutes = {
     description: '',
     initFunc: async function () {
       await inventory.InventoryTable()
-      inventory.CreateDeleteEventListener()
+      inventory.PostNewProduct()
+      inventory.EditDataProduct()
     }
   },
   '/dashboard.html#inventory': {
@@ -22,7 +23,16 @@ const urlRoutes = {
     description: '',
     initFunc: async function () {
       await inventory.InventoryTable()
-      inventory.CreateDeleteEventListener()
+      inventory.PostNewProduct()
+      inventory.EditDataProduct()
+    }
+  },
+  '/dashboard.html#category': {
+    template: '/dashboard/category.html',
+    title: '',
+    description: '',
+    initFunc: async function () {
+
     }
   },
   '/dashboard.html#verification': {

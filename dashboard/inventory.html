@@ -1,4 +1,84 @@
-<h2>Inventory</h2>
+<div class="inventory-wrapper">
+  <h2>Inventory</h2>
+
+  <!-- Trigger Modal -->
+  <button type="button" class="btn btn-success btn-add" id="modal-btn-add" data-bs-toggle="modal" data-bs-target="#staticBackdropAddProduct">
+    <i class="fa-solid fa-plus"></i>Add
+  </button>
+
+  <div class="modal fade" id="staticBackdropAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add Product</h5>
+        </div>
+        <div class="modal-body">
+          <form id="dashboard-form">
+            <label for="product__name">Product Name</label><br>
+            <input required type="text" id="product__name" name="product__name">
+            <label for="product__description">Description</label><br>
+            <input required type="text" id="product__description" name="product__description">
+            <label for="product__picture">Picture URL</label><br>
+            <input required type="url" id="product__picture" name="product__picture">
+            <label for="product__price">Price</label><br>
+            <div class="input-group">
+              <span class="input-group-text">Rp</span>
+              <input required type="number" min="0" aria-label="Product Price" class="form-control" id="product__price" name="product__price">
+            </div>
+            <label for="product__quantity">Quantity</label><br>
+            <input required type="number" min="0" id="product__quantity" name="product__quantity">
+            <label for="product__category">Category</label><br>
+            <select required type="text" class="product__category" name="product__category">
+              
+            </select>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success btn-add btn-add-new-product">New Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="staticBackdropEditProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Edit Product</h5>
+        </div>
+        <div class="modal-body">
+          <form id="dashboard-edit-form">
+            <label for="product__name">Product Name</label><br>
+            <input required type="text" id="product__name" name="product__name">
+            <label for="product__description">Description</label><br>
+            <input required type="text" id="product__description" name="product__description">
+            <label for="product__picture">Picture URL</label><br>
+            <input required type="url" id="product__picture" name="product__picture">
+            <label for="product__price">Price</label><br>
+            <div class="input-group">
+              <span class="input-group-text">Rp</span>
+              <input required type="number" min="0" aria-label="Product Price" class="form-control" id="product__price" name="product__price">
+            </div>
+            <label for="product__quantity">Quantity</label><br>
+            <input required type="number" min="0" id="product__quantity" name="product__quantity">
+            <label for="product__category">Category</label><br>
+            <select required type="text" class="product__category" name="product__category">
+              
+            </select>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-modal-edit-close" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success btn-add btn-edit-product">Edit Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <table id="inventory-table">
   <tbody>
     <tr>
