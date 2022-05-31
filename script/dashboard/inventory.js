@@ -2,14 +2,6 @@ import config from "../util/config.js"
 import errorHandling from "../util/errorHandling.js"
 import util from "../util/util.js"
 
-document.addEventListener('click', async (element) => {
-  if (element.target.id != "inventory-button") {
-    return
-  }
-
-  util.ToggleSidebarItem(element)
-})
-
 function resetInventoryForm(form) {
   form['product__name'].value = ''
   form['product__picture'].value = ''
@@ -21,9 +13,9 @@ function resetInventoryForm(form) {
 
 function hasValue(input) {
 	if (input.value.trim() === "") {
-		false
+		return false
 	}
-	true
+	return true
 }
 
 function inventoryFormValidation(form) {
@@ -51,12 +43,12 @@ export function EditDataProduct() {
   const editButton = document.querySelector('.btn-edit-product')
   const form = document.getElementById('dashboard-edit-form')
 
-  editButton.addEventListener('click', async () => {
+  editButton.addEventListener('click', async (element) => {
     if (inventoryFormValidation(form) == false) {
       alert('All field must be filled')
       return
     }
-
+    element.preventDefault()
     const productId = form.dataset.productId
     const payload = {
       name: form['product__name'].value.trim(),
@@ -99,11 +91,12 @@ export function PostNewProduct() {
   const addButton = document.querySelector('.btn-add-new-product')
   const form = document.getElementById('dashboard-form')
 
-  addButton.addEventListener('click', async () => {
-    if (inventoryFormValidation(form) == false) {
-      alert('All field must be filled')
-      return
-    }
+  addButton.addEventListener('click', async (element) => {
+    // if (inventoryFormValidation(form) == false) {
+    //   alert('All field must be filled')
+    //   return
+    // }
+    element.preventDefault()
     const payload = {
       name: form['product__name'].value.trim(),
       picture_url: form['product__picture'].value.trim(),
@@ -180,7 +173,8 @@ export async function InventoryTable() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      'order_type': 1
+      'order_type': 1,
+      'limit': 1000
     })
   }
   ).then(response => errorHandling.HandlingFetchError(response))
@@ -216,12 +210,12 @@ export async function InventoryTable() {
       inventoryTable.appendChild(node)
 
       createDeleteEventListener(node.querySelector('.delete-inventory-item'))
-      createGetDataListener(node.querySelector('.edit-inventory-item'))
+      initGetDataListener(node.querySelector('.edit-inventory-item'))
     })
   }
 }
 
-function createGetDataListener(element) {
+function initGetDataListener(element) {
   element.addEventListener('click', async event => {
     event.preventDefault()
 
@@ -243,7 +237,6 @@ function createGetDataListener(element) {
     }
 
     const form = document.getElementById('dashboard-edit-form')
-    resetInventoryForm(form)
 
     form['product__name'].value = willUpdateItem.data.product_name
     form['product__picture'].value = willUpdateItem.data.picture_url

@@ -38,10 +38,12 @@ const util = {
     let JWTPayload = this.DecodeJWT(sendLogin.access_token)
     localStorage.setItem("profile.id", JWTPayload.data.id)
   },
-  ToggleSidebarItem: function (element) {
-    const activated = document.querySelector('.nav-item-active')
-    activated.classList.remove('nav-item-active')
-    element.target.parentElement.classList.add('nav-item-active')
+  ToggleSidebarItem: function () {
+    if (window.location.hash.substring(1)) {
+      const activated = document.querySelector('.nav-item-active')
+      activated.classList.remove('nav-item-active')
+      document.getElementById(window.location.hash.substring(1) + '-button').parentNode.classList.add('nav-item-active')
+    }
   },
   GetUserJWTToken: function () {
     return localStorage.getItem('auth.access_token')
