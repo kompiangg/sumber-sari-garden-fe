@@ -1,4 +1,3 @@
-import config from "./util/config.js";
 import errorHandling from "./util/errorHandling.js";
 import util from "./util/util.js";
 
@@ -27,13 +26,13 @@ loginButton.addEventListener('click', async (event) => {
 	event.preventDefault()
 
 	const form = document.getElementById('login-form')
-	
+
 	let valid = formValidation("login", form)
 
 	if (valid != true) {
 		return
 	}
-	
+
 	const data_profile = {
 		"email": form.elements['login__email'].value.trim(),
 		"password": form.elements['login__password'].value.trim(),
@@ -44,10 +43,10 @@ loginButton.addEventListener('click', async (event) => {
 	const sendLogin = await util.FetchAuth('/auth/login', payload)
 
 	if (sendLogin.error != null) {
-		errorHandling.PrintError(sendLogin.error.message)
+		errorHandling.PrintError(sendLogin.error)
 		return
 	}
-	
+
 	util.SetLocalStorageLogin(sendLogin.data)
 
 	window.location.href = "index.html"
@@ -103,10 +102,12 @@ registerButton.addEventListener("click", async (event) => {
 function showMessage(input, message, type) {
 	const name = input.name
 	const msg = input.parentNode.querySelector(`small.${name}`)
-
-	msg.innerText = message
-	input.className = type ? "success-validation" : "error-validation"
-	msg.className = type ? "success-validation" : "error-validation"
+	
+	msg.innerHTML = message
+	input.classList.remove(!type ? "success-validation" : "error-validation")
+	input.classList.add(type ? "success-validation" : "error-validation")
+	msg.classList.remove(!type ? "success-validation" : "error-validation")
+	msg.classList.add(type ? "success-validation" : "error-validation")
 	return type
 }
 
@@ -132,7 +133,7 @@ function formValidation(sectionValidation, form) {
 		let phoneValid = hasValue(form['register__phone'], "*Please enter your phone number")
 		let addressValid = hasValue(form['register__address'], "*Please enter your address")
 		let emailValid = hasValue(form['register__email'], "*Please enter your email")
-		let passwordValid = hasValue(form['register__password'], "*Please enter your password") 
+		let passwordValid = hasValue(form['register__password'], "*Please enter your password")
 
 		if (firstNameValid &&
 			lastNameValid &&
@@ -140,8 +141,8 @@ function formValidation(sectionValidation, form) {
 			addressValid &&
 			emailValid &&
 			passwordValid) {
-				return true
-			}
+			return true
+		}
 		return false
 	}
 }
