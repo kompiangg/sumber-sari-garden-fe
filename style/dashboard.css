@@ -56,7 +56,8 @@ table, th, td {
   width: 100%;
 }
 
-tr:nth-child(even) {
+tr:nth-child(even),
+.modal-body-history .brief-information div:nth-child(even) {
   background-color: #edf5ec;
 }
 
@@ -139,4 +140,27 @@ form label {
 .modal-header {
   background-color: #21301f;
   color: white;
+}
+
+.mt-6 {
+  margin-top: 2rem!important;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem!important;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.brief-information p {
+  margin: 0.3rem 0.6rem; 
+}
+
+.verification-button {
+  cursor: pointer;
+  user-select: none;
 }
