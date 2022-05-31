@@ -1,6 +1,7 @@
 // import InventoryTable from "../inventory.js"
 import * as inventory from '../dashboard/inventory.js'
 import * as category from '../dashboard/category.js'
+import * as history from '../dashboard/history.js'
 
 const mainTitle = 'Dashboard'
 
@@ -40,20 +41,12 @@ const urlRoutes = {
       category.EditCategoryProduct()
     }
   },
-  '/dashboard.html#verification': {
-    template: '/dashboard/verification.html',
-    title: 'Verification | ' + mainTitle,
-    description: '',
-    initFunc: function () {
-
-    }
-  },
   '/dashboard.html#discount': {
     template: '/dashboard/discount.html',
     title: 'Discount | ' + mainTitle,
     description: '',
     description: '',
-    initFunc: function () {
+    initFunc: async function () {
 
     }
   },
@@ -62,8 +55,8 @@ const urlRoutes = {
     title: 'history | ' + mainTitle,
     description: '',
     description: '',
-    initFunc: function () {
-
+    initFunc: async function () {
+      await history.InventoryTable()
     }
   }
 }
