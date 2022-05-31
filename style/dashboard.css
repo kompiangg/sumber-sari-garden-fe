@@ -131,3 +131,12 @@ main {
 table th {
   text-align: center;
 }
+
+form label {
+  margin-top: 10px;
+}
+
+.modal-header {
+  background-color: #21301f;
+  color: white;
+}

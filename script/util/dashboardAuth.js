@@ -3,7 +3,7 @@ import errorHandling from "./errorHandling.js";
 
 async function ValidateAdmin() {
   const isAdmin = localStorage.getItem('profile.role_id')
-  if (isAdmin == null || isAdmin != 1) { // Uncomment when deploy
+  if (isAdmin != 1) {
     window.location.href = "index.html"
     return 0
   }

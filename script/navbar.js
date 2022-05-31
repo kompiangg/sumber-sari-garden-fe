@@ -68,10 +68,10 @@ document.addEventListener('click', async element => {
   if (element.target.classList.contains('profile-button')) {
     element.preventDefault()
 
-    const isAdmin = localStorage.getItem('profile.role_id')
-    if (isAdmin == 2) {
+    const isAdmin = localStorage.getItem('profile.role_id') == 1
+    if (!isAdmin) {
       window.location.href = "profile.html"
-    } else if (isAdmin == 1) {
+    } else if (isAdmin) {
       let valid = await ValidateAdmin()
       if (valid == 0) {
         return

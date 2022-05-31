@@ -30,16 +30,17 @@ function inventoryFormValidation(form) {
   let nameValid = hasValue(form['product__name'])
   let descValid = hasValue(form['product__description'])
   let pictValid = hasValue(form['product__picture'])
-  let priceValid = (+form['product__price'].value.trim()) == 0 ? false : true
-  let qtyValid = (+form['product__quantity'].value.trim()) == 0 ? false : true
-  let product__category = (+form['product__category'].value.trim()) == 0 ? false : true
+  let priceValid = +(form['product__price'].value.trim()) == 0 ? false : true
+  let qtyValid = +(form['product__quantity'].value.trim()) == 0 ? false : true
+  // let product__category = +(form['product__category'].value.trim()) == 0 ? false : true
 
+  console.log(nameValid, descValid, pictValid, priceValid, qtyValid );
   if (nameValid &&
     descValid &&
     pictValid &&
     priceValid &&
-    qtyValid &&
-    product__category
+    qtyValid 
+    // && product__category
     ) {
       return true
   }
@@ -192,7 +193,7 @@ export async function InventoryTable() {
     const node = document.createElement('tr')
     node.classList = 'inventory-item'
     const each = `
-      <td colspan="8" style="text-align: center;">Data not found</td>
+      <td colspan="8" style="text-align: center; font-weight: 600;">Data not found</td>
     `
     node.innerHTML = each
     inventoryTable.appendChild(node)
