@@ -120,6 +120,14 @@ form#dashboard-edit-form {
   padding-right: 60px;
 }
 
+form span{
+  color: red;
+}
+
 main {
   margin-bottom: 3rem;
+}
+
+table th {
+  text-align: center;
 }

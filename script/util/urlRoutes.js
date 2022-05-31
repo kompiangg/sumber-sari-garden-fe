@@ -1,5 +1,5 @@
 // import InventoryTable from "../inventory.js"
-import * as inventory from '../inventory.js'
+import * as inventory from '../dashboard/inventory.js'
 
 const urlRoutes = {
   404: {

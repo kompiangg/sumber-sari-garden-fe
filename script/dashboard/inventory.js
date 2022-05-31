@@ -1,6 +1,6 @@
-import config from "./util/config.js"
-import errorHandling from "./util/errorHandling.js"
-import util from "./util/util.js"
+import config from "../util/config.js"
+import errorHandling from "../util/errorHandling.js"
+import util from "../util/util.js"
 
 document.addEventListener('click', async (element) => {
   if (element.target.id != "inventory-button") {
@@ -10,7 +10,7 @@ document.addEventListener('click', async (element) => {
   util.ToggleSidebarItem(element)
 })
 
-function ResetInventoryForm(form) {
+function resetInventoryForm(form) {
   form['product__name'].value = ''
   form['product__picture'].value = ''
   form['product__description'].value = ''
@@ -19,11 +19,43 @@ function ResetInventoryForm(form) {
   form['product__category'].value = 1
 }
 
+function hasValue(input) {
+	if (input.value.trim() === "") {
+		false
+	}
+	true
+}
+
+function inventoryFormValidation(form) {
+  let nameValid = hasValue(form['product__name'])
+  let descValid = hasValue(form['product__description'])
+  let pictValid = hasValue(form['product__picture'])
+  let priceValid = (+form['product__price'].value.trim()) == 0 ? false : true
+  let qtyValid = (+form['product__quantity'].value.trim()) == 0 ? false : true
+  let product__category = (+form['product__category'].value.trim()) == 0 ? false : true
+
+  if (nameValid &&
+    descValid &&
+    pictValid &&
+    priceValid &&
+    qtyValid &&
+    product__category
+    ) {
+      return true
+  }
+  return false
+}
+
 export function EditDataProduct() {
   const editButton = document.querySelector('.btn-edit-product')
   const form = document.getElementById('dashboard-edit-form')
 
   editButton.addEventListener('click', async () => {
+    if (inventoryFormValidation(form) == false) {
+      alert('All field must be filled')
+      return
+    }
+
     const productId = form.dataset.productId
     const payload = {
       name: form['product__name'].value.trim(),
@@ -57,7 +89,7 @@ export function EditDataProduct() {
     const closeModalBtn = document.querySelector('.btn-modal-edit-close')
     closeModalBtn.click()
 
-    ResetInventoryForm(form)
+    resetInventoryForm(form)
     InventoryTable()
   })
 }
@@ -67,7 +99,10 @@ export function PostNewProduct() {
   const form = document.getElementById('dashboard-form')
 
   addButton.addEventListener('click', async () => {
-
+    if (inventoryFormValidation(form) == false) {
+      alert('All field must be filled')
+      return
+    }
     const payload = {
       name: form['product__name'].value.trim(),
       picture_url: form['product__picture'].value.trim(),
@@ -100,7 +135,7 @@ export function PostNewProduct() {
     const closeModalBtn = document.querySelector('.btn-modal-close')
     closeModalBtn.click()
 
-    ResetInventoryForm(form)
+    resetInventoryForm(form)
     InventoryTable()
   })
 }
@@ -155,7 +190,7 @@ export async function InventoryTable() {
 
   if (allProducts.data.products == null) {
     const node = document.createElement('tr')
-
+    node.classList = 'inventory-item'
     const each = `
       <td colspan="8" style="text-align: center;">Data not found</td>
     `
@@ -174,18 +209,18 @@ export async function InventoryTable() {
         <td>${element.price}</td>
         <td>${element.description}</td>
         <td><a href='${element.picture_url}'>Link</a></td>
-        <td><a class="edit-inventory-item">edit</a> <a class="delete-inventory-item">delete</a></td>
+        <td><a class="edit-inventory-item" target='_blank'>edit</a> <a class="delete-inventory-item">delete</a></td>
       `
       node.innerHTML = each
       inventoryTable.appendChild(node)
 
-      CreateDeleteEventListener(node.querySelector('.delete-inventory-item'))
-      CreateGetDataListener(node.querySelector('.edit-inventory-item'))
+      createDeleteEventListener(node.querySelector('.delete-inventory-item'))
+      createGetDataListener(node.querySelector('.edit-inventory-item'))
     })
   }
 }
 
-function CreateGetDataListener(element) {
+function createGetDataListener(element) {
   element.addEventListener('click', async event => {
     event.preventDefault()
 
@@ -207,7 +242,7 @@ function CreateGetDataListener(element) {
     }
 
     const form = document.getElementById('dashboard-edit-form')
-    ResetInventoryForm(form)
+    resetInventoryForm(form)
 
     form['product__name'].value = willUpdateItem.data.product_name
     form['product__picture'].value = willUpdateItem.data.picture_url
@@ -219,9 +254,13 @@ function CreateGetDataListener(element) {
   })
 }
 
-function CreateDeleteEventListener(element) {
+function createDeleteEventListener(element) {
   element.addEventListener('click', async event => {
     event.preventDefault()
+    if (confirm('Are you sure want to delete this product?') != true) {
+      return
+    }
+
     const productId = event.target.parentNode.parentNode.dataset.productId
     const userToken = util.GetUserJWTToken()
 

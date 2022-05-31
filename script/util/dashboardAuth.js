@@ -14,7 +14,9 @@ async function ValidateAdmin() {
   ).then(response => errorHandling.HandlingFetchError(response))
     .then(response => response.json())
     .catch(error => {
-      errorHandling.PrintError(error)
+      errorHandling.PrintError(error.message)
+      console.log(error.message);
+      return error.json()
     })
 
   if (isAdminFromRepository.error != null) {

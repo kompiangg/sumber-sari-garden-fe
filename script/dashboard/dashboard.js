@@ -1,6 +1,6 @@
-import urlRoutes from "./util/urlRoutes.js";
-import ValidateAdmin from "./util/dashboardAuth.js";
-import errorHandling from "./util/errorHandling.js";
+import urlRoutes from "../util/urlRoutes.js";
+import ValidateAdmin from "../util/dashboardAuth.js";
+import errorHandling from "../util/errorHandling.js";
 
 (async function () {
   let valid = await ValidateAdmin()

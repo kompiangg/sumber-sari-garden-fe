@@ -1,4 +1,3 @@
-import config from "./util/config.js";
 import errorHandling from "./util/errorHandling.js";
 import util from "./util/util.js";
 
@@ -103,10 +102,12 @@ registerButton.addEventListener("click", async (event) => {
 function showMessage(input, message, type) {
 	const name = input.name
 	const msg = input.parentNode.querySelector(`small.${name}`)
-
-	msg.innerText = message
-	input.className = type ? "success-validation" : "error-validation"
-	msg.className = type ? "success-validation" : "error-validation"
+	
+	msg.innerHTML = message
+	input.classList.remove(!type ? "success-validation" : "error-validation")
+	input.classList.add(type ? "success-validation" : "error-validation")
+	msg.classList.remove(!type ? "success-validation" : "error-validation")
+	msg.classList.add(type ? "success-validation" : "error-validation")
 	return type
 }
 
