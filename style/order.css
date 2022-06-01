@@ -29,32 +29,40 @@
 
 .container1 {
   /* height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--white);
   border-radius: 1em;
+  flex: 2;
 }
 
 .container2 {
   /* height: 100vh; */
+  width: auto;
   background-color: var(--main_green);
   border-radius: 1em;
+  flex: 1;
 }
 
 .input-coupon input{
-  width: 110%;
+  width: 100%;
   padding: 9px 20px;
   margin: 10px 0;
   display: inline-block;
   background-color: transparent;
   border-radius: 20px;
-  border-color: var(--main_green);
+  border-color: var(--main_yellow);
   border-style: solid!important;
-  color: var(--main_green);
+  color: var(--main_yellow);
 }
 
+.container-apply-button a {
+  color: #32502E;
+}
 
 .coupon-button {
   margin: 10px 30px;
-  border: 2px solid var(--main_green);
+  border: 2px solid var(--main_yellow);
   color: var(--white);
   border-radius: 50px;
   padding: 10px 25px;
@@ -63,8 +71,30 @@
   transition: 0.3s;
 }
 
+.checkout-btn ul li {
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+
+  border: var(--main_yellow);
+  background: var(--main_yellow);
+  color: var(--main_green);
+
+  font-weight: 600;
+}
+
+.checkout-btn ul li:hover {
+  background: var(--light_yellow);
+  border: var(--light_yellow);
+  border-radius: 30px;
+
+  -webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+
 .apply-btn {
-  background-color: var(--main_green);
+  background-color: var(--main_yellow);
   cursor: pointer;
 }
 
@@ -84,7 +114,6 @@
 }
 
 .menu {
-	border-bottom: 1px solid rgba(0,0,0,.05);
 	margin: 0;
 }
 

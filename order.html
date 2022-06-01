@@ -20,18 +20,14 @@
 
         <section class="cart-container">
             <div class="container p-5 ">
-                <div class="main-container row d-flex flex-row">
+                <div class="main-container row d-flex">
                     
-                    <div class="container1 d-flex p-5">
+                    <div class="container1 p-5">
                         <!-- ini tempat card -->
                         <div class="container">
-                            <div class="container d-flex cart-header">
-                            
-                                <h4 class="mb-0 mx-3">Your Cart</h4>
-                            </div>
-                            <div class="row g-5">
-                              <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                                <div class="p-3 card rounded-4">
+                            <div class="row gx-5 d-flex align-items-center justify-content-center">
+                              <div class="col-md-5" id="card-item">
+                                <div class="p-3 card align-content-center justify-content-center rounded-4">
                                     <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <div class="product-info">
@@ -63,8 +59,8 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                                <div class="p-3 card rounded-4">
+                              <div class="col-md-5" id="card-item">
+                                <div class="p-3 card align-content-center justify-content-center rounded-4">
                                     <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <div class="product-info">
@@ -96,8 +92,8 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                                <div class="p-3 card rounded-4">
+                              <div class="col-md-5" id="card-item">
+                                <div class="p-3 card align-content-center justify-content-center rounded-4">
                                     <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <div class="product-info">
@@ -129,8 +125,8 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                                <div class="p-3 card rounded-4">
+                              <div class="col-md-5" id="card-item">
+                                <div class="p-3 card align-content-center justify-content-center rounded-4">
                                     <img src="https://i.postimg.cc/1zCVzrqw/cute-cactus2.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <div class="product-info">
@@ -164,59 +160,59 @@
                               </div>
                             </div>
 
+                        </div>
+                    </div>
+
+                    <div class="container2 p-5 d-flex">
+                        <!-- ini tempat payment method     -->
+                        <div class="d-flex flex-column align-items-left payment-methods">
+                            <h4>Shopping Cart</h4>
                             <div class="row container-cart-item">	
-                                <div class="col-md-8 offset-md-2 horizontal-cart-divider"  style="margin-top: 0px;">
+                                <div class="horizontal-cart-divider"  style="margin-top: 0px;">
                                     <hr>
                                 </div>
-                                <div class="d-flex justify-content-between col-md-8 offset-md-2 quantity-all-items">
+                                <div class="d-flex justify-content-between quantity-all-items">
                                     <h6>Quantity : </h6>
                                     <p>0</p>
                                 </div>
-                                <div class="d-flex justify-content-between col-md-8 offset-md-2 semi-total">
+                                <div class="d-flex justify-content-between semi-total">
                                     <h6>Total : </h6>
                                     <p>Rp0</p>
                                 </div>
-                                <div class="d-flex justify-content-between col-md-8 offset-md-2 discount-invoice">
+                                <div class="d-flex justify-content-between discount-invoice">
                                     <h6>Discount : </h6>
                                     <p>-Rp0</p>
                                 </div>
-                                <div class="col-md-8 offset-md-2 horizontal-cart-divider">
+                                <div class="horizontal-cart-divider">
                                     <hr>
                                 </div>
-                                <div class="d-flex justify-content-between col-md-8 offset-md-2 grand-total">
+                                <div class="d-flex justify-content-between grand-total">
                                     <h6>Grand Total : </h6>
                                     <p>Rp0</p>
                                 </div>
                             </div>
 
-                            <div class="col-md-8 offset-md-2 horizontal-cart-divider">
+                            <div class="horizontal-cart-divider">
                                 <hr>
                             </div>
                             
                             <div class="row input-coupon">
-                                <div class="col-md-5 offset-2">
+                                <div class="col-md-5 w-100 d-flex justify-content-center align-items-center">
                                     <input type="text" name="coupon" id="coupon" placeholder="Enter Coupon">
-                                </div>
-                                <div class="col-md-1 container-apply-button">
-                                    <div class="d-flex justify-content-center align-content-center">
-                                        <a class="coupon-button apply-btn">Apply</a>
+                                    <div class="menu effect-10">
+                                        <ul>
+                                            <li><a href="#" class="bdr_btm">APPLY</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
 
-                        </div>
-                    </div>
-
-                    <div class="container2 d-flex p-5">
-                        <!-- ini tempat payment method     -->
-                        <div class="d-flex flex-column align-items-center justify-content-center col-md-8 offset-md-2 payment-methods">
-                            <h4 class="my-4">Payment Methods</h4>
-                            <div class="menu effect-10">
+                            <div class="checkout-btn menu">
                                 <ul>
-                                    <li><a href="#" class="bdr_btm">Bayar Di Tempat</a></li>
-                                    <li><a href="#" class="bdr_btm">Online Payment</a></li>
+                                    <li><a href="#" class="bdr_btm">CHECKOUT</a></li>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                     
@@ -232,5 +228,6 @@
         <!-- <script type="module" src="./script/index.js"></script> -->
         <script type="module" src="./script/navbar.js"></script>
         <script type="module" src="./script/footer.js"></script>
+        <script type="text/script" src="./script/addtocart.js"></script>
       </body>
 </html>
