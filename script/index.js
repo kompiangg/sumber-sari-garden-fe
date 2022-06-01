@@ -11,19 +11,39 @@ import errorHandling from "./util/errorHandling.js"
     return
   }
 
-  const innerCarousel = document.querySelector(".carousel-inner");
+  const innerCarousel = document.querySelector(".carousel-inner")
+  const carouselIndicators = document.querySelector('.carousel-indicators')
+
   let willInserted = ""
-
-  coupon.data.forEach(element => {
-    willInserted += `
-    <div class="carousel-item active" data-bs-interval="5000">
-      <div class="discount">
-          <p>${element.description}</p>
-          <p class="discount-wrapper">${element.code}</p>
+  let carouselButton = ""
+  coupon.data.forEach((element, index) => {
+    if (index == 0) {
+      carouselButton += `
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="active" aria-current="true"></button>
+      `
+      willInserted += `
+      <div class="carousel-item active" data-bs-interval="5000">
+        <div class="discount">
+            <p>${element.description}</p>
+            <p class="discount-wrapper">${element.code}</p>
+        </div>
       </div>
-    </div>
-    `
+      `
+    } else {
+      carouselButton += `
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}"></button>
+      `
+      willInserted += `
+      <div class="carousel-item" data-bs-interval="5000">
+        <div class="discount">
+            <p>${element.description}</p>
+            <p class="discount-wrapper">${element.code}</p>
+        </div>
+      </div>
+      `
+    }
   });
-
+  
+  carouselIndicators.innerHTML = carouselButton
   innerCarousel.innerHTML = willInserted
 })();

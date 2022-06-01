@@ -1,5 +1,12 @@
 import ValidateAdmin from "./util/dashboardAuth.js"
 
+const favIcon = document.createElement('link')
+favIcon.rel = 'icon'
+favIcon.type = "image/x-icon"
+favIcon.href = "/assets/img/shop_logo.png"
+
+document.querySelector('head').appendChild(favIcon)
+
 const headerNav = document.querySelector('header')
 
 const link = document.createElement('link')
