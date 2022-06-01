@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,500,600,700&display=swap');
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -21,8 +21,25 @@ h1 {
   text-align: center!important;
 }
 
+section.banner {
+  background-image: url('./assets/img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  font-size: 1.1em;
+}
+
 .banner h1 {
   text-align: left!important;
+  color: black;
+  font-weight: 600;
+  font-size: 3em!important;
+}
+
+.banner .container .row {
+  width: 50%;
 }
 
 section {
@@ -76,13 +93,12 @@ main {
 .banner {
   position:relative;
   width:100%;
-  margin-top: 60px!important;
+  margin-top: 4.5em!important;
 }
 
 .banner .bg {
   display:flex;
   position: relative;
-  background:#222;
   width: 100%;
   height:75vh;
   
