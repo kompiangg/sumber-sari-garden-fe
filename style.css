@@ -15,6 +15,31 @@ a, a:hover, a:focus, a:active {
   color: inherit!important;
 }
 
+h1 {
+  font-size:2.4em!important;
+  text-align: center!important;
+}
+
+.banner h1 {
+  text-align: left!important;
+}
+
+section {
+  margin-top: 4em;
+}
+
+.section-header h1 {
+  margin-bottom: 0.15em!important;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 2em;
+}
+
 .navbar {
   padding: 0.75em 0;
 }
@@ -71,7 +96,7 @@ a, a:hover, a:focus, a:active {
 .banner {
   position:relative;
   width:100%;
-  margin-top: 60px;
+  margin-top: 60px!important;
 }
 
 .banner .bg {
@@ -142,7 +167,6 @@ a, a:hover, a:focus, a:active {
 .new-catalog{
   position:relative;
   width:100%;
-  margin: 10px 20px;
   transition: 0.3s;
 }
 
@@ -154,12 +178,11 @@ a, a:hover, a:focus, a:active {
   font-size:2em;
   font-weight: 900;
   text-align: left;
-  text-transform: uppercase;
 }
 
 .new-catalog h1::before{
   content: "New";
-  text-decoration: underline 3px;
+  /* text-decoration: underline 3px; */
   color: #32502E;
 }
 
@@ -247,7 +270,6 @@ a, a:hover, a:focus, a:active {
 .article {
   position:relative;
   width:100%;
-  margin: 10px 20px;
 }
 
 .article h1{
@@ -258,12 +280,11 @@ a, a:hover, a:focus, a:active {
   font-size:2em;
   font-weight: 900;
   text-align: left;
-  text-transform: uppercase;
 }
 
 .article h1::before{
-  content: "NICE";
-  text-decoration: underline 3px;
+  content: "Nice";
+  /* text-decoration: underline 3px; */
   color: #32502E;
 }
 
