@@ -5,152 +5,73 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
-
 }
 
-:root {
-    --main_green: #32502E;
-    --second_green: #406343;
-    --main_yellow: #ECE7B4;
-    --light_yellow: #F3EFCC;
-    --highlight_yellow: #FFCE45;
-    --white: #FFFFFF;
+main.order {
+  margin-top: 7em!important;
 }
 
-.main-container {
-  border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+main.order h1 {
+  margin-top: 1em!important;
+  text-align: left!important;
 }
 
-.cart-header img{
-  width: 4%;
-  height: auto;
+main.order p {
+  font-size: 20px;
 }
 
-.container1 {
-  /* height: 100vh; */
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--white);
-  border-radius: 1em;
-  flex: 2;
+main.order section {
+  margin-top: 2em;
 }
 
-.container2 {
-  /* height: 100vh; */
-  width: auto;
-  background-color: var(--main_green);
-  border-radius: 1em;
-  flex: 1;
+.category h2 {
+  display: inline-block!important;
+  background-color: #32502E;
+  padding: 10px 30px 10px 20px;
+  color: white;
 }
 
-.input-coupon input{
-  width: 100%;
-  padding: 9px 20px;
-  margin: 10px 0;
-  display: inline-block;
-  background-color: transparent;
-  border-radius: 20px;
-  border-color: var(--main_yellow);
-  border-style: solid!important;
-  color: var(--main_yellow);
+div .col-3 {
+  margin-top: 1em!important;
 }
 
-.container-apply-button a {
-  color: #32502E;
+.category.row {
+  margin-top: 2em!important;
 }
 
-.coupon-button {
-  margin: 10px 30px;
-  border: 2px solid var(--main_yellow);
-  color: var(--white);
+.container.order h1 {
+  margin-top: 10px!important;
+}
+
+.new-catalog .product-info{
+  margin-left: 10px;
+  font-weight: 550;
+  font-size: 10px;
+  padding: 0px 0px;
+}
+
+#i-star {
+  color: #FFCE45;
+}
+
+#i-cart {
+  color: #FFF;
+  background-color: #FFCE45;
   border-radius: 50px;
-  padding: 10px 25px;
-  text-transform: uppercase;
-  font-weight: 500;
-  transition: 0.3s;
+  background-size: 500px;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
 }
 
-.checkout-btn ul li {
-  margin-top: 1em;
-  width: 100%;
-  text-align: center;
-
-  border: var(--main_yellow);
-  background: var(--main_yellow);
-  color: var(--main_green);
-
-  font-weight: 600;
-}
-
-.checkout-btn ul li:hover {
-  background: var(--light_yellow);
-  border: var(--light_yellow);
-  border-radius: 30px;
-
-  -webkit-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out;
-}
-
-
-.apply-btn {
-  background-color: var(--main_yellow);
-  cursor: pointer;
-}
-
-.payment-methods {
-  color: var(--white);
-}
-
-
-/* ----- EFFECT 10 - Transform Shape with Border */
-.menu,
-.menu .menu_title,
-.menu ul li a,
-.menu ul li a:after,
-.menu ul li a:before {
-	-webkit-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out;
-}
-
-.menu {
-	margin: 0;
-}
-
-.menu ul {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.menu ul li {
-	display: inline-block;
-}
-
-.menu ul li:hover {
-	color: var(--main_green);
-  display: inline-block;
-}
-
-.menu ul li a {
-	color: var(--main_green);
-	display: block;
-	line-height: 50px;
-	padding: 0 30px;
-	text-decoration: none;
-}
-
-.menu.effect-10 ul li a {
-  border: 1px solid rgba(0,0,0,0);
-  margin: 0 10px;
-}
-.menu.effect-10 ul li a.bdr_btm {
-  border-bottom: 1px solid var(--main_yellow);
-}
-
-.menu.effect-10 ul li a:hover {
-  background: var(--light_yellow);
-  border: 1px solid var(--main_yellow);
-  border-radius: 30px;
+.new-catalog .col-3{
+  margin: 0px 10px;
+  margin-bottom: 10px;
+  width: 170px;
+  height: 250px;
+  text-align: left;
+  box-shadow: 0px 0px 30px rgba(1, 41, 112, 0.08);
+  min-width: 160px;
+  padding: 0px 0px;
+  position: relative;
 }

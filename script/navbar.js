@@ -35,7 +35,7 @@ navbar.innerHTML = `
                 <a class="nav-link" href="index.html#product">Product</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html#articel">Article</a>
+                <a class="nav-link" href="index.html#article">Article</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#voucher">Voucher</a>

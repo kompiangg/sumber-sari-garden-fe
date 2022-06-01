@@ -89,12 +89,14 @@ import util from "./util/util.js";
             </div>
   
             <h6 class="fs-7">IDR ${util.ToCurrency(element.price)}</h6>
-  
-            <svg id="i-cart" xmlns="http://www.w3.org/2000/svg" viewBox="-0 -7 32 45" width="30" height="30" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2" />
-                <circle cx="25" cy="27" r="2" />
-                <circle cx="12" cy="27" r="2" />
-            </svg>
+
+            <a href="order.html">
+              <svg id="i-cart" xmlns="http://www.w3.org/2000/svg" viewBox="-0 -7 32 45" width="30" height="30" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2" />
+                  <circle cx="25" cy="27" r="2" />
+                  <circle cx="12" cy="27" r="2" />
+              </svg>
+            </a>
         </div>
       `
       gridMenu.appendChild(willInsert)

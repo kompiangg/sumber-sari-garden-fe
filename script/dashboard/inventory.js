@@ -24,14 +24,14 @@ function inventoryFormValidation(form) {
   let pictValid = hasValue(form['product__picture'])
   let priceValid = +(form['product__price'].value.trim()) == 0 ? false : true
   let qtyValid = +(form['product__quantity'].value.trim()) == 0 ? false : true
-  // let product__category = +(form['product__category'].value.trim()) == 0 ? false : true
+  let product__category = +(form['product__category'].value.trim()) == 0 ? false : true
 
   if (nameValid &&
     descValid &&
     pictValid &&
     priceValid &&
     qtyValid 
-    // && product__category
+    && product__category
     ) {
       return true
   }
@@ -91,10 +91,10 @@ export function PostNewProduct() {
   const form = document.getElementById('dashboard-form')
 
   addButton.addEventListener('click', async (element) => {
-    // if (inventoryFormValidation(form) == false) {
-    //   alert('All field must be filled')
-    //   return
-    // }
+    if (inventoryFormValidation(form) == false) {
+      alert('All field must be filled')
+      return
+    }
     element.preventDefault()
     const payload = {
       name: form['product__name'].value.trim(),
