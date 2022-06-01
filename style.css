@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400,500,700&display=swap');
 
 * {
   font-family: 'Poppins', sans-serif;
   padding:0;
   margin:0;
   box-sizing: border-box;
-}
-.page-wrapper {
-  position:relative;
 }
 
 a, a:hover, a:focus, a:active {
@@ -55,42 +52,21 @@ section {
 #header {
   position: fixed;
   top: 0;
+}
+
+body {
+  min-height: 100vh;
   display: flex;
-  background-color: #FFF;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 50px;
-  padding: 10px 40px;
-  z-index: 999;
+  flex-direction: column;
 }
 
-#header img {
-	width: 250px;
+main {
+  margin-top: auto;
+  margin-bottom: 50px;
 }
 
-#nav-bar ul {
-  display: flex;
-}
-
-#nav-bar li {
-  list-style: none;
-  margin-left: 20px;
-}
-
-#nav-bar a {
-  text-decoration: none;
-  color: #222; 
-}
-
-#nav-bar a:hover{
-  color: #ff5a26;
-  cursor: pointer;
-}
-
-#nav-bar ion-icon {
-    color: #32502E;
-    font-size: 24px;
+.page-wrapper {
+  position:relative;
 }
 
 .banner {
@@ -142,7 +118,7 @@ section {
   text-align: left;
 }
 
-.form .email, .btn{
+.form .email{
   width: 50%;
   border: none;
   padding: 5px 15px;
@@ -272,6 +248,8 @@ section {
   width:100%;
 }
 
+
+
 .article h1{
   margin-left: 20px;
   margin-bottom: 40px;
@@ -349,8 +327,6 @@ section {
 .article .post-box:hover .post-img img {
   transform: rotate(6deg) scale(1.2);
 }
-
-
 
 /* Explore */
 .explore {
@@ -435,7 +411,7 @@ section {
 }
 
 .my-photo {
-  	width: 30%;
+  width: 30%;
 }
 
 .person-img {
@@ -459,11 +435,6 @@ section {
 
 .my-data li {
   list-style: none;
-}
-
-.profile .hyperlink {
-  display: none;
-  align-items: center;
 }
 
 @media (max-width: 800px) {
@@ -501,29 +472,76 @@ section {
 	
 }
 
-/* contact */
-.contact {
-  display: flex;
+@media (max-width: 1400px) {
+  .article .row div {
+    margin-top: 1em;
+  }
+}
+
+
+.discount {
+  background: url(./assets/img/discount_section.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 154px;
+  border-radius: 10px;
+  display: flex!important;
   align-items: center;
-  justify-content: center;
-  background-color:#32502E;
-  padding: 10px 40px;
+  justify-content: space-evenly;
+}
+
+.discount p {
+  color: white;
+  font-weight: medium;
+  font-size: 48px;
+  margin-bottom: 0px;
+}
+
+.discount p.discount-wrapper {
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 28px;
+  padding: 4px 60px;
+  cursor: pointer;
+}
+
+.carousel-inner {
+  width: 100%!important;
+}
+
+/* Profil */
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #10b88b;
   
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(12, 197, 104, 0.628), rgb(201, 218, 215));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))
 }
 
-.contact .contact-logo {
-  display:flex;
-  align-items: center;
-  margin: 0px 10px;
+/* History */
+#i-star {
+  color: #FFCE45;
 }
 
-.contact .contact-logo p {
-  color: #fff;
+#p-cart {
+  color: #FFF;
+  background-color: #FFCE45;
+  border-radius: 50px;
+  background-size: 500px;
+  position: absolute;
+  bottom: 45px;
+  right: 24px;
 }
 
-.contact ion-icon {
-  color: #fff;
-  font-size: 1.5em;
-  margin: 5px 10px;
+#p-cart:hover {
+  background-color: #33793C;
+  cursor: pointer;
 }
 

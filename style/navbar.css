@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.logout-button,
+.login-button {
+  color: #32502E!important;
+  font-weight: 600!important;
+  border-color: #32502E!important;
+}
+
+.logout-button:hover,
+.login-button:hover {
+  color:white!important;
+  font-weight: 600!important;
+  background-color: #32502E;
+}
+
+.profile .hyperlink {
+  display: none;
+  align-items: center;
+}
+
+.profile-button,
+.register-button {
+  background-color: #32502E;
+  border-color: #32502E;
+}
+
+.profile-button:hover,
+.register-button:hover {
+  background-color: #21301f;
+}
+
+.profile-button,
+.register-button,
+.profile-button:hover,
+.register-button:hover{
+  color: white!important;
+  font-weight: 600!important;
+}
+
+nav .btn {
+  font-size: 15px;
+}
+
+nav a {
+  color: #32502E;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #899288!important;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none!important;
+  color: inherit!important;
+}
+
+.navbar {
+  padding: 0.75em 0;
+}
+
+.navbar img {
+  width: 250px;
+}
+
+.navbar .profile button {
+  font-size: small;
+}
+
+.btn{
+  width: 50%;
+  padding: 5px 15px;
+  margin: 6px 20px; 
+  letter-spacing:1px;
+  border-radius: 5px;
+}
+
+.profile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
