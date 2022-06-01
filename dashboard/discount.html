@@ -1,1 +1,80 @@
-<h2>Discount</h2>
+<div class="inventory-wrapper">
+  <h2>Discount</h2>
+
+    <!-- Trigger Modal -->
+    <button type="button" class="btn btn-success btn-add" id="modal-btn-add" data-bs-toggle="modal" data-bs-target="#staticBackdropAddDiscount">
+      <i class="fa-solid fa-plus"></i>Add
+    </button>
+  
+    <div class="modal fade" id="staticBackdropAddDiscount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Add Coupon</h5>
+          </div>
+          <div class="modal-body">
+            <form id="dashboard-form">
+              <label for="coupon__code">Coupon Code<span>*</span></label>
+              <input required class="form-control" type="text" id="coupon__code" name="coupon__code">
+              <label for="amount__discount">Amount Discount<span>*</span></label>
+              <div class="input-group">
+                <input required type="number" min="0" aria-label="Amount of Discount" class="form-control" id="amount__discount" name="amount__discount">
+                <span class="input-group-text">%</span>
+              </div>
+              <label for="coupon__description">Description<span>*</span><span class="max-label">(Max 31 characters)</span></label>
+              <textarea required class="form-control" type="text" id="coupon__description" name="coupon__description"></textarea>
+              <label for="expired__at">Expired At<span>*</span></label>
+              <input required class="form-control mb-3" type="date" id="expired__at" name="expired__at">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success btn-add btn-add-new-coupon">New Coupon</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="staticBackdropEditDiscount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Edit Coupon</h5>
+          </div>
+          <div class="modal-body">
+            <form id="dashboard-edit-form">
+              <label for="coupon__code">Coupon Code<span>*</span></label>
+              <input required class="form-control" type="text" id="coupon__code" name="coupon__code">
+              <label for="amount__discount">Amount Discount<span>*</span></label>
+              <div class="input-group">
+                <input required type="number" min="0" aria-label="Amount of Discount" class="form-control" id="amount__discount" name="amount__discount">
+                <span class="input-group-text">%</span>
+              </div>
+              <label for="coupon__description">Description<span>*</span><span class="max-label">(Max 31 characters)</span></label>
+              <textarea required maxlength="31" class="form-control" type="text" id="coupon__description" name="coupon__description"></textarea>
+              <label for="expired__at">Expired At<span>*</span></label>
+              <input class="form-control mb-3" type="date" id="expired__at" name="expired__at">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-modal-edit-close" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success btn-add btn-edit-coupon">Edit Coupon</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<table id="discount-table">
+  <tbody>
+    <tr>
+      <th style="width: 40%;">ID</th>
+      <th>Coupon Code</th>
+      <th style="width: 60%;">Discount (%)</th>
+      <th>Description</th>
+      <th>Expired At</th>
+      <th style="width: 50%;">Status</th>
+      <th style="width: 60%;">Action</th>
+    </tr>
+  </tbody>
+</table>
