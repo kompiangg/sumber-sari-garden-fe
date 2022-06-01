@@ -3,7 +3,7 @@ import errorHandling from "../util/errorHandling.js"
 import util from "../util/util.js"
 
 export async function InventoryTable() {
-  const willDelete = document.querySelectorAll('.inventory-item')
+  const willDelete = document.querySelectorAll('.history-item')
   willDelete.forEach(e => {
     e.remove()
   })
@@ -21,7 +21,7 @@ export async function InventoryTable() {
     .then(response => response.json())
     .catch(error => errorHandling.PrintError(error))
 
-    const inventoryTable = document.querySelector('#inventory-table tbody')
+    const inventoryTable = document.querySelector('#history-table tbody')
     
     if (allHistory.data.length == 0) {
       const node = document.createElement('tr')
