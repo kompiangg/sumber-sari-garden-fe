@@ -47,6 +47,23 @@ const util = {
   },
   GetUserJWTToken: function () {
     return localStorage.getItem('auth.access_token')
+  },
+  ToCurrency : function(string){
+    let harga = string.toString()
+    let res = ''
+    let strLength = harga.length
+    while (strLength != 0){
+        if (strLength % 3 != 0) {
+            res += harga.slice(0, strLength % 3) + '.'
+            harga = harga.slice(strLength % 3)
+            strLength = harga.length
+        } else {
+            res += harga.slice(0, 3) + '.'
+            harga = harga.slice(3)
+            strLength = harga.length
+        }
+    }
+    return res.slice(0, res.length - 1)
   }
 }
 export default util

@@ -1,5 +1,6 @@
 import config from "./util/config.js";
 import errorHandling from "./util/errorHandling.js"
+import util from "./util/util.js";
 
 (async function(){
   const coupon = await fetch(config.baseURL + '/inventory/coupons?limit=3')
@@ -87,7 +88,7 @@ import errorHandling from "./util/errorHandling.js"
               <em>${element.category_name}</em>
             </div>
   
-            <h6 class="fs-7">IDR ${element.price}</h6>
+            <h6 class="fs-7">IDR ${util.ToCurrency(element.price)}</h6>
   
             <svg id="i-cart" xmlns="http://www.w3.org/2000/svg" viewBox="-0 -7 32 45" width="30" height="30" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2" />
@@ -101,7 +102,6 @@ import errorHandling from "./util/errorHandling.js"
   })
 
   const carouselInner = gridMenu.parentNode.parentNode.querySelector('.carousel-inner')
-  console.log(carouselInner);
   itemFetch.data.products.forEach((element, index) => {
     if (index >= 9) {
       const willInsert = document.createElement('div')
