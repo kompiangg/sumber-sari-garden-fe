@@ -164,3 +164,8 @@ form label {
   cursor: pointer;
   user-select: none;
 }
+
+.max-label {
+  color: rgb(104, 104, 104)!important;
+  font-size: 11px;
+}

@@ -1,6 +1,7 @@
 // import InventoryTable from "../inventory.js"
 import * as inventory from '../dashboard/inventory.js'
 import * as category from '../dashboard/category.js'
+import * as discount from '../dashboard/discount.js'
 import * as history from '../dashboard/history.js'
 
 const mainTitle = 'Dashboard'
@@ -47,7 +48,9 @@ const urlRoutes = {
     description: '',
     description: '',
     initFunc: async function () {
-
+      await discount.DiscountTable()
+      discount.PostNewCoupon()
+      discount.EditDataProduct()
     }
   },
   '/dashboard.html#history': {

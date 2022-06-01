@@ -26,7 +26,6 @@ function inventoryFormValidation(form) {
   let qtyValid = +(form['product__quantity'].value.trim()) == 0 ? false : true
   // let product__category = +(form['product__category'].value.trim()) == 0 ? false : true
 
-  console.log(nameValid, descValid, pictValid, priceValid, qtyValid );
   if (nameValid &&
     descValid &&
     pictValid &&

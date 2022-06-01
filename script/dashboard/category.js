@@ -137,7 +137,7 @@ export async function CategoryTable() {
   } else {
     fetchCategory.data.forEach(element => {
       const node = document.createElement('tr')
-      node.classList = 'inventory-item'
+      node.classList = 'category-item'
       node.dataset.categoryId = element.id
       node.dataset.categoryName = element.name
       const each = `

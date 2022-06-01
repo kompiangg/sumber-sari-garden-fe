@@ -47,7 +47,7 @@ export async function InventoryTable() {
           const orderDate = element.order_date.split(' ')
           const node = document.createElement('tr')
           
-          node.classList = 'inventory-item'
+          node.classList = 'history-item'
           node.dataset.userName = userProfile.data.first_name + ' ' + userProfile.data.last_name
           node.dataset.historyId = element.order_id
 
