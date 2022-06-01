@@ -114,7 +114,7 @@ import util from "./util/util.js";
         <img src="${element.picture_url}" class="d-block w-100" alt="${element.product_name}">
       `
 
-      carouselInner.appendChild(carouselInner)
+      carouselInner.appendChild(willInsert)
     }
   })
 })();

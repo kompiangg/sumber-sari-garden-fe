@@ -32,13 +32,13 @@ navbar.innerHTML = `
                 <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#explore">Explore</a>
+                <a class="nav-link" href="index.html#product">Product</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="index.html#articel">Article</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="allvoucher.html">Voucher</a>
+              <a class="nav-link" href="index.html#voucher">Voucher</a>
             </li>
         </ul>
         <div class="profile d-flex">

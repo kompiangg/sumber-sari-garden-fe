@@ -530,6 +530,19 @@ main {
 
 .carousel-inner {
   width: 100%!important;
+  height: 100%!important;
+}
+
+.carousel-inner .carousel-item {
+  object-fit: cover!important;
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.carousel-inner div img {
+  object-fit: cover!important;
+  width: 100%!important;
+  height: 100%!important;
 }
 
 /* Profil */
