@@ -143,6 +143,7 @@ a, a:hover, a:focus, a:active {
   position:relative;
   width:100%;
   margin: 10px 20px;
+  transition: 0.3s;
 }
 
 .new-catalog h1{
@@ -166,8 +167,12 @@ a, a:hover, a:focus, a:active {
   color: #FFCE45;
 }
 
+.new-catalog .col-lg-6{
+  justify-self: center;
+}
+
 .new-catalog .col-3{
-  margin: 0px 9px;
+  margin: 0px 10px;
   margin-bottom: 10px;
   width: 170px;
   height: 250px;
@@ -183,7 +188,7 @@ a, a:hover, a:focus, a:active {
   transition: 0.2s ease;
   cursor: pointer;
   background-color:#f6f3e8;
-  margin: 2px 9px;
+  transform: scale(1.08);
 }
 
 .new-catalog .row{
@@ -246,20 +251,83 @@ a, a:hover, a:focus, a:active {
 }
 
 .article h1{
-  margin: 20px 20px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
   color: #000000;
   font-size:2em;
   font-weight: 900;
   text-align: left;
-  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .article h1::before{
-  content: "Nice";
+  content: "NICE";
   text-decoration: underline 3px;
   color: #32502E;
 }
 
+.article .post-box {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  transition: 0.3s;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.article .col-lg-4{
+  width: 420px;
+  height: 450px;
+  margin-left: 10px;
+  
+}
+
+.article .post-box .post-img {
+  overflow: hidden;
+  margin: -30px -30px 15px -30px;
+  position: relative;
+}
+.article .post-box .post-img img {
+  transition: 0.5s;
+}
+.article .post-box .post-date {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(1, 41, 112, 0.6);
+  display: block;
+  margin-bottom: 10px;
+}
+.article .post-box .post-title {
+  font-size: 24px;
+  color: #012970;
+  font-weight: 700;
+  margin-bottom: 18px;
+  position: relative;
+  transition: 0.3s;
+}
+.article .post-box .readmore {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  line-height: 1;
+  transition: 0.3s;
+}
+.article .post-box .readmore i {
+  line-height: 0;
+  margin-left: 4px;
+  font-size: 18px;
+}
+.article .post-box:hover .post-title {
+  color: #4154f1;
+}
+.article .post-box:hover .post-img img {
+  transform: rotate(6deg) scale(1.2);
+}
 
 
 
