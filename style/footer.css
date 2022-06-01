@@ -8,10 +8,10 @@
 }
 
 footer {
-  margin-top: 50px;
   min-height: 150px;
   background-color: #232323;
   padding-top: 35px;
+  margin-top: auto;
 }
 
 footer h4 {

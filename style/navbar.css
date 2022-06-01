@@ -85,3 +85,9 @@ a, a:hover, a:focus, a:active {
   letter-spacing:1px;
   border-radius: 5px;
 }
+
+.profile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

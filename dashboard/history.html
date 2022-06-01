@@ -1,0 +1,74 @@
+<div class="inventory-wrapper">
+  <h2>User History</h2>
+
+  <div class="modal fade" id="staticBackdropMoreHistory" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Detail User History</h5>
+        </div>
+        <div class="modal-body modal-body-history" style="padding: 1rem 2rem;">
+          <h3 class="mt-1 mb-0">Brief Information</h3>
+          <hr class="mt-2 mb-6">
+          <div class="brief-information">
+            <div class="order-id d-flex justify-content-between">
+              <p><strong>Order Id</strong></p> 
+              <p></p>
+            </div>
+            <div class="customer-name d-flex justify-content-between">
+              <p><strong>Customer Name</strong></p>
+              <p> </p>
+            </div>
+            <div class="order-date d-flex justify-content-between">
+              <p><strong>Order Date</strong></p>
+              <p></p>
+            </div>
+            <div class="order-time d-flex justify-content-between">
+              <p><strong>Order Time</strong></p>
+              <p></p>
+            </div>
+            <div class="order-status d-flex justify-content-between">
+              <p><strong>Order Status</strong></p>
+              <p></p>
+            </div>
+            <div class="order-qty d-flex justify-content-between">
+              <p><strong>Item Quantity</strong></p>
+              <p></p>
+            </div>
+            <div class="grand-total d-flex justify-content-between">
+              <p><strong>Grand Total</strong></p>
+              <p></p>
+            </div>
+            <div class="coupon-code d-flex justify-content-between">
+              <p><strong>Coupon Code</strong></p>
+              <p></p>
+            </div>
+          </div>
+          
+          <h3 class="mt-6 mb-0">Detail Items</h3>
+          <hr class="mt-2 mb-6">
+          <div class="card-container">
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table id="history-table">
+  <tbody>
+    <tr>
+      <th style="width: 40%;">ID</th>
+      <th>Customer Name</th>
+      <th>Order Date</th>
+      <th>Item Qty</th>
+      <th>Grand Total</th>
+      <th>Status</th>
+      <th style="width: 60%;">Detail</th>
+    </tr>
+  </tbody>
+</table>

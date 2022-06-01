@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,300,400,500,700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+a, a:hover, a:focus, a:active, main li {
+  text-decoration: none!important;
+  list-style: none;
+  color: inherit!important;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin-top: 70px;
+}
+
+.dashboard h1 {
+  margin-top: 40px!important;
+}
+
+.spa-dashboard {
+  margin-top: 25px!important;
+}
+
+.sidebar {
+  background-color: #32502E;
+  color: white;
+  height: fit-content;
+}
+
+.nav-item {
+  font-weight: 300;
+}
+
+.nav-item-active {
+  font-weight: 700;
+}
+
+table, th, td {
+  border: 1px solid black!important;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+tr:nth-child(even),
+.modal-body-history .brief-information div:nth-child(even) {
+  background-color: #edf5ec;
+}
+
+th, td {
+  padding: 9px 15px;
+  word-wrap: break-word!important;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+table a {
+  text-decoration: underline!important;
+  color: blue!important;
+}
+
+.inventory-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inventory-wrapper button {
+  margin-right: 0px;
+  padding: auto;
+  width: auto;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -1px;
+  background-color: #32502E;
+}
+
+.inventory-wrapper .btn-add:hover, .inventory-wrapper .btn-add:active {
+  background-color: #21301f;
+}
+
+.inventory-wrapper button i {
+  margin-right: 3px;
+}
+
+.inventory-wrapper .btn-modal-close,
+.inventory-wrapper .btn-modal-edit-close{
+  background-color: white;
+  color: #32502E!important;
+  font-weight: 600!important;
+  border-color: #32502E!important;
+}
+
+.inventory-wrapper .btn-modal-close:hover,
+.inventory-wrapper .btn-modal-edit-close:hover{
+  color:white!important;
+  font-weight: 600!important;
+  background-color: #32502E;
+}
+
+form#dashboard-form,
+form#dashboard-edit-form {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+form span{
+  color: red;
+}
+
+main {
+  margin-bottom: 3rem;
+}
+
+table th {
+  text-align: center;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+.modal-header {
+  background-color: #21301f;
+  color: white;
+}
+
+.mt-6 {
+  margin-top: 2rem!important;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem!important;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.brief-information p {
+  margin: 0.3rem 0.6rem; 
+}
+
+.verification-button {
+  cursor: pointer;
+  user-select: none;
+}
+
+.max-label {
+  color: rgb(104, 104, 104)!important;
+  font-size: 11px;
+}
