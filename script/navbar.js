@@ -37,6 +37,9 @@ navbar.innerHTML = `
             <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="allvoucher.html">Voucher</a>
+            </li>
         </ul>
         <div class="profile d-flex">
         </div>

@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.discount-wrapper{
+  position: relative;
+}
+
 a, a:hover, a:focus, a:active {
   text-decoration: none!important;
   color: inherit!important;
@@ -545,3 +549,170 @@ main {
   cursor: pointer;
 }
 
+/* Discount CSS*/
+.discount-wrapper * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif
+}
+
+.discount-wrapper body {
+  margin-top: 30px;
+  background-color:rgb(128, 23, 23);
+}
+
+.discount-wrapper .container {
+  min-height: 30px;
+  padding: 9px 0;
+  display: flex;
+  align-items: center;
+}
+
+.discount-wrapper p {
+  margin: 0px
+}
+
+.discount-wrapper .card {
+  width: 615px;
+  height: 276px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  overflow: hidden
+}
+
+.discount-wrapper .card .backgroundEffect {
+  bottom: 0;
+  height: 0px;
+  width: 100%
+}
+
+.discount-wrapper .card:hover {
+  color: #fff;
+  transform: scale(1.025);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
+
+.discount-wrapper .card:hover .backgroundEffect {
+  bottom: 0;
+  height: 320px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background: hsla(162, 86%, 11%, 0.473);
+  animation: popBackground 0.3s ease-in
+}
+
+@keyframes popBackground {
+  0% {
+      height: 20px;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%
+  }
+
+  50% {
+      height: 80px;
+      border-top-left-radius: 75%;
+      border-top-right-radius: 75%
+  }
+
+  75% {
+      height: 160px;
+      border-top-left-radius: 85%;
+      border-top-right-radius: 85%
+  }
+
+  100% {
+      height: 320px;
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%
+  }
+}
+
+.discount-wrapper .card .pic {
+  position: relative
+}
+
+.discount-wrapper .card .pic img {
+  width: 623px;
+  height: 118px;
+  object-fit: scale-down;
+  padding: 0.25rem;
+  background-color: #afc8ba;
+  max-width: 100%;
+}
+
+.discount-wrapper .card .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 102px;
+  height: 38px;
+  background-color: #334730;
+  color: white;
+  position: absolute;
+  bottom: -18px;
+  transition: all ease
+}
+
+.discount-wrapper .card .date .day {
+  font-size: 14px;
+  font-weight: 600
+}
+
+.card .date .month,
+.card .date .year {
+  font-size: 10px
+}
+
+.discount-wrapper .card .text-muted {
+  font-size: 12px
+}
+
+.discount-wrapper .card:hover .text-muted {
+  color: #fff !important
+}
+
+.discount-wrapper .card .content {
+  padding: 0 20px
+}
+
+.discount-wrapper .card .content .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #49775dcf;
+  border-radius: 25px;
+  font-size: 12px;
+  border: none
+}
+
+.discount-wrapper .card:hover .content .btn {
+  background: #fff;
+  color: #1b9ce3;
+  box-shadow: #0000001a 0px 3px 5px
+}
+
+.discount-wrapper .card .content .btn .fas {
+  font-size: 10px;
+  padding-left: 5px
+}
+
+.discount-wrapper .card .content .foot .admin {
+  color: #1b9ce3;
+  font-size: 12px
+}
+
+.discount-wrapper .card:hover .content .foot .admin {
+  color: #fff
+}
+
+.discount-wrapper .card .content .foot .icon {
+  font-size: 12px
+}
