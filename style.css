@@ -268,3 +268,21 @@ main {
   padding: 4px 60px;
   cursor: pointer;
 }
+
+/* Profil */
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #10b88b;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(12, 197, 104, 0.628), rgb(201, 218, 215));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))
+}
+
+/* History */
+#i-star {
+  color: #FFCE45;
+}
