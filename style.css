@@ -12,6 +12,48 @@ a, a:hover, a:focus, a:active {
   color: inherit!important;
 }
 
+h1 {
+  font-size:2.4em!important;
+  text-align: center!important;
+}
+
+.banner h1 {
+  text-align: left!important;
+}
+
+section {
+  margin-top: 4em;
+}
+
+.section-header h1 {
+  margin-bottom: 0.15em!important;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 2em;
+}
+
+.navbar {
+  padding: 0.75em 0;
+}
+
+.navbar img {
+  width: 250px;
+}
+
+.navbar .profile button {
+  font-size: small;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -30,7 +72,7 @@ main {
 .banner {
   position:relative;
   width:100%;
-  margin-top: 60px;
+  margin-top: 60px!important;
 }
 
 .banner .bg {
@@ -94,6 +136,196 @@ main {
 
 .form .btn:hover {
   background-color:#ffc800;
+}
+
+/* New-Catalog */
+
+.new-catalog{
+  position:relative;
+  width:100%;
+  transition: 0.3s;
+}
+
+.new-catalog h1{
+  margin-left: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: #000000;
+  font-size:2em;
+  font-weight: 900;
+  text-align: left;
+}
+
+.new-catalog h1::before{
+  content: "New";
+  /* text-decoration: underline 3px; */
+  color: #32502E;
+}
+
+.new-catalog .icons{
+  color: #FFCE45;
+}
+
+.new-catalog .col-lg-6{
+  justify-self: center;
+}
+
+.new-catalog .col-3{
+  margin: 0px 10px;
+  margin-bottom: 10px;
+  width: 170px;
+  height: 250px;
+  text-align: left;
+  box-shadow: 0px 0px 30px rgba(1, 41, 112, 0.08);
+  min-width: 160px;
+  padding: 0px 0px;
+  position: relative;
+}
+
+.new-catalog .col-3:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.2s ease;
+  cursor: pointer;
+  background-color:#f6f3e8;
+  transform: scale(1.08);
+}
+
+.new-catalog .row{
+  margin: 0px 5px;
+}
+
+.new-catalog .col-3 img{
+  width: 100%;
+  height: 160px;
+  position: relative;
+}
+
+.new-catalog .product-info{
+  margin-left: 10px;
+  font-weight: 550;
+  font-size: 10px;
+  padding: 0px 0px;
+}
+
+.new-catalog .fs-5{
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.new-catalog .fs-7{
+  color: #33793C;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.new-catalog .col-lg-6{
+  padding: 0px 0px;
+}
+
+#i-star {
+  color: #FFCE45;
+}
+
+#i-cart {
+  color: #FFF;
+  background-color: #FFCE45;
+  border-radius: 50px;
+  background-size: 500px;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+#i-cart:hover {
+  background-color: #33793C;
+  cursor: pointer;
+}
+
+/* Article */
+.article {
+  position:relative;
+  width:100%;
+}
+
+
+
+.article h1{
+  margin-left: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  color: #000000;
+  font-size:2em;
+  font-weight: 900;
+  text-align: left;
+}
+
+.article h1::before{
+  content: "Nice";
+  /* text-decoration: underline 3px; */
+  color: #32502E;
+}
+
+.article .post-box {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  transition: 0.3s;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.article .col-lg-4{
+  width: 420px;
+  height: 450px;
+  margin-left: 10px;
+  
+}
+
+.article .post-box .post-img {
+  overflow: hidden;
+  margin: -30px -30px 15px -30px;
+  position: relative;
+}
+.article .post-box .post-img img {
+  transition: 0.5s;
+}
+.article .post-box .post-date {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(1, 41, 112, 0.6);
+  display: block;
+  margin-bottom: 10px;
+}
+.article .post-box .post-title {
+  font-size: 24px;
+  color: #012970;
+  font-weight: 700;
+  margin-bottom: 18px;
+  position: relative;
+  transition: 0.3s;
+}
+.article .post-box .readmore {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  line-height: 1;
+  transition: 0.3s;
+}
+.article .post-box .readmore i {
+  line-height: 0;
+  margin-left: 4px;
+  font-size: 18px;
+}
+.article .post-box:hover .post-title {
+  color: #4154f1;
+}
+.article .post-box:hover .post-img img {
+  transform: rotate(6deg) scale(1.2);
 }
 
 /* Explore */
@@ -240,6 +472,13 @@ main {
 	
 }
 
+@media (max-width: 1400px) {
+  .article .row div {
+    margin-top: 1em;
+  }
+}
+
+
 .discount {
   background: url(./assets/img/discount_section.png);
   background-repeat: no-repeat;
@@ -247,7 +486,7 @@ main {
   width: 100%;
   height: 154px;
   border-radius: 10px;
-  display: flex;
+  display: flex!important;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -267,6 +506,10 @@ main {
   font-size: 28px;
   padding: 4px 60px;
   cursor: pointer;
+}
+
+.carousel-inner {
+  width: 100%!important;
 }
 
 /* Profil */

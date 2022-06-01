@@ -11,7 +11,7 @@ import errorHandling from "./util/errorHandling.js"
     return
   }
 
-  const innerCarousel = document.querySelector(".carousel-inner")
+  const innerCarousel = document.querySelector("section.discount-section .carousel-inner")
   const carouselIndicators = document.querySelector('.carousel-indicators')
 
   let willInserted = ""
