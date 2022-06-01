@@ -286,3 +286,19 @@ main {
 #i-star {
   color: #FFCE45;
 }
+
+#p-cart {
+  color: #FFF;
+  background-color: #FFCE45;
+  border-radius: 50px;
+  background-size: 500px;
+  position: absolute;
+  bottom: 45px;
+  right: 24px;
+}
+
+#p-cart:hover {
+  background-color: #33793C;
+  cursor: pointer;
+}
+
