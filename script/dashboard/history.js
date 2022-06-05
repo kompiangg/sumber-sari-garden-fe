@@ -108,7 +108,7 @@ function createMoreDataEventListener(element) {
             `<span class="badge text-bg-danger">${briefInformationFetch.data.order_status}</span>
             <span class="badge text-bg-warning" id="verification-button">Verification</span>`
     briefInformation.querySelectorAll('.order-qty p')[1].innerHTML = briefInformationFetch.data.item_count
-    briefInformation.querySelectorAll('.grand-total p')[1].innerHTML = briefInformationFetch.data.grand_total
+    briefInformation.querySelectorAll('.grand-total p')[1].innerHTML = "IDR " + util.ToCurrency(briefInformationFetch.data.grand_total)
     briefInformation.querySelectorAll('.coupon-code p')[1].innerHTML = briefInformationFetch.data.coupon_code
 
     const cardContainer = document.querySelector('.modal-body .card-container')
@@ -130,9 +130,9 @@ function createMoreDataEventListener(element) {
       <div class="card-body">
         <p class="card-text mb-0"><strong>${productInformationFetch.data.product_name}</strong></p>
         <p class="card-text mb-0"><em>${productInformationFetch.data.category_name}</em></p>
-        <p class="card-text mb-0">Rp${productInformationFetch.data.price}</p>
-        <p class="card-text mb-0">${productInformationFetch.data.qty} Items</p>
-        <p class="card-text" style="font-weight: 500;">Rp${productInformationFetch.data.price}</p>
+        <p class="card-text mb-0">IDR ${util.ToCurrency(element.price)}</p>
+        <p class="card-text mb-0">${element.qty} Items</p>
+        <p class="card-text" style="font-weight: 500;">IDR ${util.ToCurrency(element.sub_total)}</p>
       </div>
       `
       cardContainer.appendChild(each)

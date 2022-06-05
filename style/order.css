@@ -33,6 +33,7 @@ main.order section {
 
 div .col-3 {
   margin-top: 1em!important;
+  cursor:default!important;
 }
 
 .category.row {

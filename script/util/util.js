@@ -48,7 +48,7 @@ const util = {
   GetUserJWTToken: function () {
     return localStorage.getItem('auth.access_token')
   },
-  ToCurrency : function(string){
+  ToCurrency: function(string){
     let harga = string.toString()
     let res = ''
     let strLength = harga.length
@@ -64,6 +64,13 @@ const util = {
         }
     }
     return res.slice(0, res.length - 1)
+  },
+  ToInteger: function (string) {
+    let res = ''
+    string.split('.').forEach(element => {
+      res += element
+    })
+    return +res
   }
 }
 export default util
