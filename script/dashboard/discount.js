@@ -142,8 +142,8 @@ export async function DiscountTable() {
   }
 
   const isCouponValid = {}
-  activeCoupon.data.forEach(element => {
-    isCouponValid[`${element.code}`] = true
+  Object.entries(activeCoupon.data).forEach(element => {
+    isCouponValid[`${element[1].code}`] = true
   })
 
   const allCoupon = await fetch(
@@ -161,8 +161,8 @@ export async function DiscountTable() {
     return
   }
 
-  allCoupon.data.forEach(element => {
-    element.isCouponValid = isCouponValid[`${element.code}`] ? true : false
+  Object.entries(allCoupon.data).forEach(element => {
+    element[1].isCouponValid = isCouponValid[`${element[1].code}`] ? true : false
   })
 
   const discountTable = document.querySelector('#discount-table tbody')
@@ -176,7 +176,8 @@ export async function DiscountTable() {
     node.innerHTML = each
     discountTable.appendChild(node)
   } else {
-    allCoupon.data.forEach(element => {
+    Object.entries(allCoupon.data).forEach(e => {
+      let element = e[1]
       const node = document.createElement('tr')
       node.classList = 'discount-item'
       node.dataset.couponId = element.coupon_id

@@ -28,7 +28,6 @@
 }
 
 .container1 {
-  /* height: 100vh; */
   display: flex;
   flex-wrap: wrap;
   background-color: var(--white);
@@ -37,7 +36,6 @@
 }
 
 .container2 {
-  /* height: 100vh; */
   width: auto;
   background-color: var(--main_green);
   border-radius: 1em;
@@ -104,6 +102,11 @@
 
 
 /* ----- EFFECT 10 - Transform Shape with Border */
+
+a.bdr_btm {
+  cursor: pointer;
+}
+
 .menu,
 .menu .menu_title,
 .menu ul li a,
@@ -183,4 +186,31 @@
 
 #apply-button {
   cursor: pointer;
+}
+
+tr:nth-child(even),
+.modal-body-invoice .brief-information div:nth-child(even) {
+  background-color: #edf5ec;
+}
+
+.modal-body-invoice .brief-information p {
+  margin: 10px;
+}
+
+.modal-body-invoice .brief-information {
+  margin-bottom: 20px;
+}
+
+.modal-footer button {
+  width: auto;
+}
+
+.modal-footer button {
+  background-color: #32502E;
+  border-color: #32502E;
+  color: white!important;
+}
+
+.modal-footer button:hover {
+  background-color: #21301f;
 }

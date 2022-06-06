@@ -169,3 +169,93 @@ form label {
   color: rgb(104, 104, 104)!important;
   font-size: 11px;
 }
+
+.report-wrapper {
+  margin-left: 20px;
+}
+
+.report-wrapper .row {
+  margin-top: 1.5em;
+}
+
+.report-wrapper .col-12 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.report-wrapper .col-12 hr {
+  color: white;
+  border-width: 2px;
+}
+
+.report-wrapper .col-12 h3 {
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+.report-wrapper .col-12 p {
+  font-size: 46px;
+}
+
+.report-wrapper .col-12 h3,
+.report-wrapper .col-12 p {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+#daily-report {
+  background-color: #EB6C2E;
+}
+
+#daily-report .row div {
+  background-color: #a75228;
+  border-radius: 10px;
+  margin: 0px 10px 10px 10px!important;
+  padding: 15px;
+}
+
+#weekly-report {
+  background-color: #F2C525;
+}
+
+#weekly-report .row div {
+  background-color: #a58820;
+  border-radius: 10px;
+  margin: 0px 10px 10px 10px!important;
+  padding: 15px;
+}
+
+#monthly-report {
+  background-color: #9CCE29;
+}
+
+#monthly-report .row div {
+  background-color: #749720;
+  border-radius: 10px;
+  margin: 0px 10px 10px 10px!important;
+  padding: 15px;
+}
+
+#annually-report {
+  background-color: #2A9CFD;
+}
+
+#annually-report .row div {
+  background-color: #2578c0;
+  border-radius: 10px;
+  margin: 0px 10px 10px 10px!important;
+  padding: 15px;
+}
+
+#daily-report .row,
+#weekly-report .row,
+#monthly-report .row,
+#annually-report .row {
+  margin-top: 8px;
+}

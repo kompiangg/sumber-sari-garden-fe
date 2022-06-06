@@ -7,7 +7,7 @@ import util from "./util/util.js";
                 .then(response => errorHandling.HandlingFetchError(response))
                 .then(response => response.json())
                 .catch(error => errorHandling.PrintError(error))
-  
+
   if (coupon.error != null) {
     errorHandling.PrintError(error)
     return
@@ -18,7 +18,8 @@ import util from "./util/util.js";
 
   let willInserted = ""
   let carouselButton = ""
-  coupon.data.forEach((element, index) => {
+  Object.entries(coupon.data).forEach((e, index) => {
+    let element = e[1]
     if (index == 0) {
       carouselButton += `
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="active" aria-current="true"></button>

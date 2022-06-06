@@ -87,6 +87,23 @@ profile.innerHTML = isLogin ?
   </a>
   `
 
+document.addEventListener('click', async element => {
+  if (element.target.classList.contains('profile-button')) {
+    element.preventDefault()
+
+    const isAdmin = localStorage.getItem('profile.role_id') == 1
+    if (!isAdmin) {
+      window.location.href = "profile.html"
+    } else if (isAdmin) {
+      let valid = await ValidateAdmin()
+      if (valid == 0) {
+        return
+      }
+      window.location.href = "dashboard.html"
+    }
+  }
+})
+
 document.addEventListener('click', element => {
   if (element.target.classList.contains('logout-button')) {
     localStorage.clear()
@@ -173,22 +190,5 @@ navbar.addEventListener('click', element => {
       })
       modalBody.appendChild(each)
     })
-  }
-})
-
-document.addEventListener('click', async element => {
-  if (element.target.classList.contains('profile-button')) {
-    element.preventDefault()
-
-    const isAdmin = localStorage.getItem('profile.role_id') == 1
-    if (!isAdmin) {
-      window.location.href = "profile.html"
-    } else if (isAdmin) {
-      let valid = await ValidateAdmin()
-      if (valid == 0) {
-        return
-      }
-      window.location.href = "dashboard.html"
-    }
   }
 })

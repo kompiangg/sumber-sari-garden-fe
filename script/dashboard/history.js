@@ -17,13 +17,12 @@ export async function InventoryTable() {
         'Authorization': 'Bearer ' + userToken,
       },
     }
-  ).then(response => errorHandling.HandlingFetchError(response))
-    .then(response => response.json())
+  ).then(response => response.json())
     .catch(error => errorHandling.PrintError(error))
 
+    console.log(allHistory);
     const inventoryTable = document.querySelector('#history-table tbody')
-    
-    if (allHistory.data.length == 0) {
+    if (allHistory.data == null || allHistory.data.length == 0) {
       const node = document.createElement('tr')
       node.classList = 'inventory-item'
       const each = `

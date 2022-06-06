@@ -3,6 +3,7 @@ import * as inventory from '../dashboard/inventory.js'
 import * as category from '../dashboard/category.js'
 import * as discount from '../dashboard/discount.js'
 import * as history from '../dashboard/history.js'
+import * as report from '../dashboard/report.js'
 
 const mainTitle = 'Dashboard'
 
@@ -13,13 +14,19 @@ const urlRoutes = {
     description: ''
   },
   '/dashboard.html': {
-    template: '/dashboard/inventory.html',
-    title: 'Inventory | ' + mainTitle,
+    template: '/dashboard/report.html',
+    title: 'Report | ' + mainTitle,
     description: '',
     initFunc: async function () {
-      await inventory.InventoryTable()
-      inventory.PostNewProduct()
-      inventory.EditDataProduct()
+      report.InitReport()
+    }
+  },
+  '/dashboard.html#report': {
+    template: '/dashboard/report.html',
+    title: 'Report | ' + mainTitle,
+    description: '',
+    initFunc: async function() {
+      report.InitReport()
     }
   },
   '/dashboard.html#inventory': {
