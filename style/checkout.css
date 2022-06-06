@@ -154,3 +154,33 @@
   border: 1px solid var(--main_yellow);
   border-radius: 30px;
 }
+
+.col-3{
+  margin: 0px 10px;
+  margin-bottom: 10px;
+  width: 170px;
+  height: auto;
+  min-height: 250px;
+  text-align: left;
+  box-shadow: 0px 0px 20px 10px rgb(0 0 0 / 8%);
+  min-width: 160px;
+  padding: 0px 0px;
+  position: relative;
+}
+
+.col-3:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.2s ease;
+  cursor: pointer;
+  background-color:#f6f3e8;
+  transform: scale(1.08);
+}
+
+.container2 p {
+  font-size: 14px!important;
+  font-weight: 600;
+}
+
+#apply-button {
+  cursor: pointer;
+}

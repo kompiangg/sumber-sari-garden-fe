@@ -94,7 +94,6 @@ document.addEventListener('click', element => {
 })
 
 const tempCart = JSON.parse(localStorage.getItem('temp-cart'))
-console.log(tempCart);
 if((!tempCart) || (tempCart['subQty'] == 0)) {
   const cartButton = document.querySelector('.badge-text')
   cartButton.classList.add('d-none')
