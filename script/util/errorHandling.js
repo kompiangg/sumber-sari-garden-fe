@@ -1,7 +1,7 @@
 const errorHandling = {
   PrintError: function (error) {
-    console.warn(`ERROR: ${error}`);
-    alert(`ERROR: ${error}`);
+    console.warn(`ERROR:`, error.message);
+    alert(`ERROR: ` + error.message);
   },
   HandlingFetchError: function (response) {
     if (!response.ok) {

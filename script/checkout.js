@@ -141,8 +141,10 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
 
   const token = util.GetUserJWTToken()
 
+  let promises = []
+
   Object.entries(tempCart.cart).forEach(async (e) => {
-    await fetch(
+    promises.push(await fetch(
       config.baseURL + '/usercart', {
         method: 'POST',
         headers: {
@@ -154,9 +156,10 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
           'qty': e[1].qty
         })
       }
-    ).then(response => console.log(response.json()))
-    .catch(error => console.log(error))
+    ))
   })
+
+  await Promise.all(promises)
 
   const checkoutFetch = await fetch(
     config.baseURL + '/usercart/checkout', {

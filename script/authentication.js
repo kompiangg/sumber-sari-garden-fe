@@ -70,6 +70,7 @@ registerButton.addEventListener("click", async (event) => {
 		address: form['register__address'].value.trim(),
 		email: form['register__email'].value.trim(),
 		password: form['register__password'].value.trim(),
+		role_id: 2,
 	}
 
 	const payload = JSON.stringify(data_profile)
