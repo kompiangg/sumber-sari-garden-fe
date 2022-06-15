@@ -117,6 +117,12 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
     return
   }
 
+  if (!tempCart['coupon']) {
+    tempCart['coupon'] = {
+      'code': '',
+      'discount': 0
+    }
+  }
   if (!confirm('System will creating the order, are you sure to checkout?')) {
     return
   }
@@ -127,7 +133,7 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
   invoiceModal.toggle()
 
   const briefInformation = document.querySelector('.brief-information')
-  const payload = JSON.stringify({
+  const payload = {
     'items': Object.entries(tempCart['cart']).map(e => {
         return {
           'product_id': e[1].productId,
@@ -135,31 +141,33 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
         }
       }),
     'coupon_code': tempCart['coupon'] ? tempCart.coupon.code : "",
-  })
-
-  console.log(payload);
+  }
 
   const token = util.GetUserJWTToken()
 
-  let promises = []
+  let willBeFetch = []
 
   Object.entries(tempCart.cart).forEach(async (e) => {
-    promises.push(await fetch(
+    willBeFetch.push(
+      JSON.stringify({
+        'product_id': e[1].productId,
+        'qty': e[1].qty
+      })
+    )
+  })
+
+  for (let data_payload of willBeFetch) {
+    console.log(data_payload);
+    await fetch(
       config.baseURL + '/usercart', {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer ' + token,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          'product_id': e[1].productId,
-          'qty': e[1].qty
-        })
-      }
-    ))
-  })
-
-  await Promise.all(promises)
+        body: data_payload
+      })
+  }
 
   const checkoutFetch = await fetch(
     config.baseURL + '/usercart/checkout', {
@@ -168,7 +176,7 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
         'Authorization': 'Bearer ' + token,
         'Content-Type': 'application/json'
       },
-      body: payload
+      body: JSON.stringify(payload)
     }
   ).then(response =>  errorHandling.HandlingFetchError(response))
   .then(response => response.json())
@@ -187,7 +195,7 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
   briefInformation.querySelectorAll('.order-time p')[1].innerHTML = checkoutFetch.data.string.split(' ')[1]
   briefInformation.querySelectorAll('.order-qty p')[1].innerHTML = tempCart['subQty']
   briefInformation.querySelectorAll('.grand-total p')[1].innerHTML = grandTotal
-  briefInformation.querySelectorAll('.coupon-code p')[1].innerHTML = tempCart['coupon']['code']
+  briefInformation.querySelectorAll('.coupon-code p')[1].innerHTML = tempCart['coupon']['code'] ? tempCart['coupon']['code'] : ""
   briefInformation.querySelectorAll('.discount-checkout p')[1].innerHTML = `-IDR ${util.ToCurrency(tempCart['coupon']['discount'])}`
 
   const cardContainer = document.querySelector('.modal-body .card-container')
@@ -226,6 +234,6 @@ document.querySelector('#checkout-button').addEventListener('click', async () =>
   document.querySelector('#close-invoice-button').addEventListener('click', (e) => {
     e.preventDefault()
     localStorage.removeItem('temp-cart')
-    window.location.href('index.html')
+    window.location.href = 'index.html'
   })
 })
